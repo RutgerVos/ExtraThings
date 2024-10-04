@@ -2,20 +2,19 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern":[
-            "###",
-            "###",
-            "###"       
+            "111",
+            "111",
+            "111"       
     ],
 
-    "key":{
-        "#":{
+    "key":
+    {
+        "1":{
             "item": "extrathings:extra_ingot"
         }
     },
 
     "result": {
-        "item": "extrathings:extra_block",
-        "count": 1,
-        "data": 2
+        "id": "extrathings:extra_block"
     }
 }

@@ -8,7 +8,7 @@
     ],
 
     "result": {
-        "item": "extrathings:extra_ingot",
+        "id": "extrathings:extra_ingot",
         "count": 9
     }
 }
