@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients":[
+        {
+            "item": "extrathings:extra_block"
+        }
+    ],
+
+    "result": {
+        "item": "extrathings:extra_ingot",
+        "count": 9
+    }
+}
