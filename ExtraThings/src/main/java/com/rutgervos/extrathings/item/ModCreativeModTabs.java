@@ -19,7 +19,9 @@ public class ModCreativeModTabs {
     .title(Component.translatable("creativetab.extrathings_tab"))
     .displayItems((pParameters, pOutput) -> {
         pOutput.accept(ModItems.EXTRA_INGOT.get());
+        pOutput.accept(ModItems.ORE_DETECTOR.get());
         pOutput.accept(ModBlocks.EXTRA_BLOCK.get());
+        pOutput.accept(ModBlocks.EXTRA_ORE.get());
         })
     .build());
 

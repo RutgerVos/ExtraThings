@@ -1,5 +1,6 @@
 {
     "values": [
-        "extrathings:extra_block"
+        "extrathings:extra_block",
+        "extrathings:extra_ore"
     ]
 }

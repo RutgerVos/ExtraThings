@@ -1,7 +1,12 @@
 {
     "item.extrathings.extra_ingot": "Extra Ingot",
 
+    "item.extrathings.ore_detector": "Ore detector",
+
     "block.extrathings.extra_block": "Block of Extra ingots",
+
+    "block.extrathings.extra_ore": "Extra ore",
+    
 
     "creativetab.extrathings_tab" : "Extra Things"
 }

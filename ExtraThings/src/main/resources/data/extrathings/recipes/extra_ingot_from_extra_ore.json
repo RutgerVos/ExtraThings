@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "cookingtime": 200,
+    "experience": 0.7,
+    "group": "extra_ingot",
+    "ingredient": {
+      "item": "extrathings:extra_ore"
+    },
+    "result": {
+      "id": "extrathings:extra_ingot",
+      "count": 1
+  }
+  }

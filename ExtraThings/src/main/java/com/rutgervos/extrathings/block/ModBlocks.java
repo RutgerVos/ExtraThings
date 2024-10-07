@@ -21,6 +21,8 @@ public class ModBlocks {
 
      public static final RegistryObject<Block> EXTRA_BLOCK = registerBlock("extra_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            public static final RegistryObject<Block> EXTRA_ORE = registerBlock("extra_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

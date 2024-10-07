@@ -1,6 +1,7 @@
 package com.rutgervos.extrathings.item;
 
 import com.rutgervos.extrathings.ExtraThings;
+import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,6 +14,7 @@ public class ModItems {
         DeferredRegister.create(ForgeRegistries.ITEMS, ExtraThings.MODID);
 
     public static final RegistryObject<Item> EXTRA_INGOT = ITEMS.register("extra_ingot", () -> new Item( new Item.Properties()));
+    public static final RegistryObject<Item> ORE_DETECTOR = ITEMS.register("ore_detector", () -> new OreDetectorItem( new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
