@@ -49,6 +49,7 @@ public class OreDetectorItem extends Item {
     private boolean isValuableBlock(BlockState state) {
         return state.is(Blocks.IRON_ORE) || state.is(Blocks.EMERALD_ORE) || 
         state.is(Blocks.DIAMOND_ORE) || state.is(Blocks.GOLD_ORE) || 
-        state.is(Blocks.REDSTONE_ORE) || state.is(Blocks.COPPER_ORE) || state.is(Blocks.COAL_ORE);
+        state.is(Blocks.REDSTONE_ORE) || state.is(Blocks.COPPER_ORE) || 
+        state.is(Blocks.COAL_ORE) || state.is(Blocks.NETHER_QUARTZ_ORE)|| state.is(Blocks.ANCIENT_DEBRIS);
     }
 }
