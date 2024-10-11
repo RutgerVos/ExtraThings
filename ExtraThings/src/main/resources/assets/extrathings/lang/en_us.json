@@ -3,9 +3,16 @@
 
     "item.extrathings.ore_detector": "Ore detector",
 
+    "tooltip.extrathings.ore_detector.tooltip": "Currently finds all minecraft ores",
+
+    "item.extrathings.butter": "Butter",
+
+    "item.extrathings.extra_fuel": "Extra fuel",
+
     "block.extrathings.extra_block": "Block of Extra ingots",
 
     "block.extrathings.extra_ore": "Extra ore",
+    "block.extrathings.sound_block": "Cowbell block",
     
 
     "creativetab.extrathings_tab" : "Extra Things"

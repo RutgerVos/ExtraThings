@@ -20,8 +20,12 @@ public class ModCreativeModTabs {
     .displayItems((pParameters, pOutput) -> {
         pOutput.accept(ModItems.EXTRA_INGOT.get());
         pOutput.accept(ModItems.ORE_DETECTOR.get());
+        pOutput.accept(ModItems.BUTTER.get());
+        pOutput.accept(ModItems.EXTRA_FUEL.get());
         pOutput.accept(ModBlocks.EXTRA_BLOCK.get());
         pOutput.accept(ModBlocks.EXTRA_ORE.get());
+
+        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
         })
     .build());
 

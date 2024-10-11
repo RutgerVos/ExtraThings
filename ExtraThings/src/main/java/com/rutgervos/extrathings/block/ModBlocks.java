@@ -1,6 +1,7 @@
 package com.rutgervos.extrathings.block;
 
 import com.rutgervos.extrathings.ExtraThings;
+import com.rutgervos.extrathings.block.custom.SoundBlock;
 import com.rutgervos.extrathings.item.ModItems;
 
 import net.minecraft.world.item.BlockItem;
@@ -23,6 +24,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
             public static final RegistryObject<Block> EXTRA_ORE = registerBlock("extra_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)));
+            public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
