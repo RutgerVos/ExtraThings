@@ -1,7 +1,5 @@
 package com.rutgervos.extrathings.block.custom;
 
-import com.mojang.datafixers.types.templates.List;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -20,7 +18,6 @@ public class SoundBlock extends Block {
 
     public SoundBlock(Properties p_49795_) {
         super(p_49795_);
-        //TODO Auto-generated constructor stub
     }
 
     @Override

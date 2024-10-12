@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_extra_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extrathings:extra_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:extra_ingot_from_blasting_extra_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_extra_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:extra_ingot_from_blasting_extra_ore"
+    ]
+  }
+}
