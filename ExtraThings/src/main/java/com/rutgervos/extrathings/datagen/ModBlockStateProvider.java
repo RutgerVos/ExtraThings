@@ -19,6 +19,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         BlockWithItem(ModBlocks.EXTRA_ORE);
         BlockWithItem(ModBlocks.SOUND_BLOCK);
+        BlockWithItem(ModBlocks.EXTRA_BLOCK);
     }
 
     private void BlockWithItem(RegistryObject<Block> blockRegistryObject){

@@ -1,0 +1,10 @@
+// 1.20.6	2024-10-12T19:52:25.384724	Block States: extrathings
+a65aa914cf3309bf58b5a2ece8c0bb8af6a807d1 assets/extrathings/blockstates/extra_block.json
+c05af63553a06b96d8bd80be5d322b8d24705cdf assets/extrathings/blockstates/extra_ore.json
+df4bc335dac7e7ef6e2cd50cd20f7bc9db157a8d assets/extrathings/blockstates/sound_block.json
+dd39f789a092ec903ff9ebf5f93a8d718ab5e4c5 assets/extrathings/models/block/extra_block.json
+367cd4a1d19e053d36110350f69aae911951f7e6 assets/extrathings/models/block/extra_ore.json
+8ec30f18d472cf80867e1756bf43205b10d7db66 assets/extrathings/models/block/sound_block.json
+4955ea4fdab26694bfe6936114dfa4f65c1b5893 assets/extrathings/models/item/extra_block.json
+4512fe18d672fac16f720fadcb18f2032f8193b1 assets/extrathings/models/item/extra_ore.json
+e199e80dcd374bb516e849a988760117cedd25a7 assets/extrathings/models/item/sound_block.json

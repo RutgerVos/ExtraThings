@@ -1,0 +1,4 @@
+// 1.20.6	2024-10-12T19:42:11.7146772	Loot Tables
+d1b54978ea2c0850fd6089d9ce5cff302fd52ad9 data/extrathings/loot_tables/blocks/extra_block.json
+7d0c2333c7eee5aa583b6d540c0a1f525813ad6c data/extrathings/loot_tables/blocks/extra_ore.json
+bd7f9cdaea71b337663bd557865fbd04e0974d6a data/extrathings/loot_tables/blocks/sound_block.json
