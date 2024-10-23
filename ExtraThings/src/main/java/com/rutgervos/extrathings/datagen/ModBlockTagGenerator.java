@@ -35,6 +35,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.EXTRA_BLOCK.get());
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.EXTRA_ORE.get());
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.EXTRA_BLOCK.get());
+        this.tag(BlockTags.FENCES).add(ModBlocks.EXTRA_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES).add(ModBlocks.EXTRA_FENCE_GATE.get());
+        this.tag(BlockTags.WALLS).add(ModBlocks.EXTRA_WALL.get());
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add(ModBlocks.EXTRA_BLOCK.get());
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add(ModBlocks.EXTRA_ORE.get());
     }

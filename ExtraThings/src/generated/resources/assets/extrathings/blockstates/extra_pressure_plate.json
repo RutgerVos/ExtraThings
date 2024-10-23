@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "extrathings:block/extra_pressure_plate"
+    },
+    "powered=true": {
+      "model": "extrathings:block/extra_pressure_plate_down"
+    }
+  }
+}

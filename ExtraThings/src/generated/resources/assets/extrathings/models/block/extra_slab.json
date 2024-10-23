@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "extrathings:block/extra_block",
+    "side": "extrathings:block/extra_block",
+    "top": "extrathings:block/extra_block"
+  }
+}

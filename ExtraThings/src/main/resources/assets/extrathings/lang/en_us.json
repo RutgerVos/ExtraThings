@@ -12,6 +12,15 @@
     "block.extrathings.extra_block": "Block of Extra ingots",
 
     "block.extrathings.extra_ore": "Extra ore",
+    "block.extrathings.extra_stairs": "Extra stairs",
+    "block.extrathings.extra_slab": "Extra slab",
+    "block.extrathings.extra_button": "Extra Button",
+    "block.extrathings.extra_pressure_plate": "Extra pressure plate",
+    "block.extrathings.extra_fence": "Extra fence",
+    "block.extrathings.extra_fence_gate": "Extra fencegate",
+    "block.extrathings.extra_wall": "Extra wall",
+    "block.extrathings.extra_door": "Extra door",
+    "block.extrathings.extra_trapdoor": "Extra trapdoor",
     "block.extrathings.sound_block": "Cowbell block",
     
 

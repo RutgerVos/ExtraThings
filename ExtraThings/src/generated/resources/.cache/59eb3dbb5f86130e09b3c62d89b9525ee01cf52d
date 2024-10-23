@@ -1,4 +1,13 @@
-// 1.20.6	2024-10-12T19:42:11.7146772	Loot Tables
+// 1.20.6	2024-10-23T18:17:39.9063887	Loot Tables
 d1b54978ea2c0850fd6089d9ce5cff302fd52ad9 data/extrathings/loot_tables/blocks/extra_block.json
+6c421657110ea37fe1fa3829c876961c79332e33 data/extrathings/loot_tables/blocks/extra_button.json
+49881880920cd359b5ccb620d0921260b6e0132c data/extrathings/loot_tables/blocks/extra_door.json
+859a86d431691546e1b616b52511eed8ca8859c9 data/extrathings/loot_tables/blocks/extra_fence.json
+c73f874f91ff718e6d62c5714ddad1ba03731925 data/extrathings/loot_tables/blocks/extra_fence_gate.json
 7d0c2333c7eee5aa583b6d540c0a1f525813ad6c data/extrathings/loot_tables/blocks/extra_ore.json
+d9ae45f16d3cd04b3b1ef118d658f60cfb4df6d5 data/extrathings/loot_tables/blocks/extra_pressure_plate.json
+07a1689ddf05a1b08b0bcae85a8e8cb57b44ca96 data/extrathings/loot_tables/blocks/extra_slab.json
+ed0e4a5d225d42fbd5c9e41c08ce773bdb2e3f99 data/extrathings/loot_tables/blocks/extra_stairs.json
+0e77f9776c0a09132de0664cb39b41a0c6a555c9 data/extrathings/loot_tables/blocks/extra_trapdoor.json
+ad1ae719a1c9dcb2ac445ee501ccb035e0c6c6c7 data/extrathings/loot_tables/blocks/extra_wall.json
 bd7f9cdaea71b337663bd557865fbd04e0974d6a data/extrathings/loot_tables/blocks/sound_block.json
