@@ -39,7 +39,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock((FenceBlock) ModBlocks.EXTRA_FENCE.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()));
         fenceGateBlock((FenceGateBlock) ModBlocks.EXTRA_FENCE_GATE.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()));
         wallBlock((WallBlock) ModBlocks.EXTRA_WALL.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()));
-        doorBlock((DoorBlock) ModBlocks.EXTRA_DOOR.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()), blockTexture(ModBlocks.EXTRA_BLOCK.get()));
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.EXTRA_DOOR.get()), modLoc("block/extra_door_bottom"), modLoc("block/extra_door_top"), "cutout");
         trapdoorBlock((TrapDoorBlock) ModBlocks.EXTRA_TRAPDOOR.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()), false);
     }
 

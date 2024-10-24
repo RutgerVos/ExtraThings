@@ -27,7 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.EXTRA_FUEL);
         simpleItem(ModItems.EXTRA_INGOT);
 
-        simpleBlockItem(ModBlocks.EXTRA_DOOR);
+        evenSimplerBlockItem(ModBlocks.EXTRA_DOOR);
         fenceItem(ModBlocks.EXTRA_FENCE, ModBlocks.EXTRA_BLOCK);
         buttonItem(ModBlocks.EXTRA_BUTTON, ModBlocks.EXTRA_BLOCK);
         wallItem(ModBlocks.EXTRA_WALL, ModBlocks.EXTRA_BLOCK);

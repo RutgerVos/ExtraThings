@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> ORE_DETECTOR_VALUABLES = tag("ore_detector_valuables");
+        public static final TagKey<Block> NEEDS_EXTRA_TOOL = tag("needs_extra_tool");
 
 
         private static TagKey<Block> tag(String name) {
