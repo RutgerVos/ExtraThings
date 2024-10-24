@@ -5,6 +5,8 @@ import com.rutgervos.extrathings.item.custom.FuelItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,6 +20,7 @@ public class ModItems {
     public static final RegistryObject<Item> ORE_DETECTOR = ITEMS.register("ore_detector", () -> new OreDetectorItem( new Item.Properties()));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new OreDetectorItem( new Item.Properties().food(ModFoods.BUTTER)));
     public static final RegistryObject<Item> EXTRA_FUEL = ITEMS.register("extra_fuel", () -> new FuelItem( new Item.Properties(), 20000));
+    public static final RegistryObject<Item> EXTRA_PICKAXE = ITEMS.register("extra_pickaxe", () -> new PickaxeItem(Tiers.NETHERITE, new Item.Properties().durability(1000000).fireResistant()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -22,6 +22,7 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.ORE_DETECTOR.get());
         pOutput.accept(ModItems.BUTTER.get());
         pOutput.accept(ModItems.EXTRA_FUEL.get());
+        pOutput.accept(ModItems.EXTRA_PICKAXE.get());
         pOutput.accept(ModBlocks.EXTRA_BLOCK.get());
         pOutput.accept(ModBlocks.EXTRA_ORE.get());
 

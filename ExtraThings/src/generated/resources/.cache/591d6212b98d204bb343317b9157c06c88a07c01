@@ -1,10 +1,11 @@
-// 1.20.6	2024-10-24T14:11:21.4607929	Item Models: extrathings
+// 1.20.6	2024-10-24T16:26:38.4969274	Item Models: extrathings
 e8a851d6681c6808b2ee571b4da77c512099d8f7 assets/extrathings/models/item/butter.json
 b8c2fba0390fcdd8e6dc7e36965c3e3b1eba0852 assets/extrathings/models/item/extra_button.json
 d9ed23a4c1aaca3308cd389de13f3f4aac461b92 assets/extrathings/models/item/extra_fence.json
 55b9e2e8891163c4f6c06118778d4a59155a6987 assets/extrathings/models/item/extra_fence_gate.json
 ef5feb6afcdc0ffe8d664ca84e491fd5b4080a5f assets/extrathings/models/item/extra_fuel.json
 eed1daf62e3e7ae8c1679dd21a55646cda044851 assets/extrathings/models/item/extra_ingot.json
+0d8a168e37935bfff7e0462d65dfd95055bccf01 assets/extrathings/models/item/extra_pickaxe.json
 383c2d7641a2cc3ddea6ecb83106b08f7b819a90 assets/extrathings/models/item/extra_pressure_plate.json
 2fa81965de29f6b850eb871851f4c750564851f2 assets/extrathings/models/item/extra_slab.json
 5b4304e818adce5ba2d7f0f4ff991be6c4a0d29f assets/extrathings/models/item/extra_stairs.json

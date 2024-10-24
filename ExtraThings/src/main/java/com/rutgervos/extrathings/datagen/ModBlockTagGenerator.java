@@ -40,6 +40,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WALLS).add(ModBlocks.EXTRA_WALL.get());
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add(ModBlocks.EXTRA_BLOCK.get());
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add(ModBlocks.EXTRA_ORE.get());
+        this.tag(ModTags.Blocks.NEEDS_EXTRA_TOOL).add(ModBlocks.SOUND_BLOCK.get());
     }
 
 }

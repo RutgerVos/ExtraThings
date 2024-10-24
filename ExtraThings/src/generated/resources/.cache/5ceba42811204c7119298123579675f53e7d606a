@@ -1,4 +1,5 @@
-// 1.20.6	2024-10-23T18:17:39.9073896	Tags for minecraft:block mod id extrathings
+// 1.20.6	2024-10-24T16:23:54.6215407	Tags for minecraft:block mod id extrathings
+181fb880fbdb80d4fa29d283882f26fb4ae3ced3 data/extrathings/tags/blocks/needs_extra_tool.json
 f2fbd6fb83f85a9b46e99797b1c2369d4fce7b8b data/extrathings/tags/blocks/ore_detector_valuables.json
 66b445d5c8b37a0ef4325d6a483864660527ff88 data/forge/tags/blocks/needs_netherite_tool.json
 8d5ab43d0f8db2294dbc6984ce64708b7b3ac3ff data/minecraft/tags/blocks/fences.json
