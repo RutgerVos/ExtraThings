@@ -17,10 +17,10 @@ public class ModItems {
         DeferredRegister.create(ForgeRegistries.ITEMS, ExtraThings.MODID);
 
     public static final RegistryObject<Item> EXTRA_INGOT = ITEMS.register("extra_ingot", () -> new Item( new Item.Properties()));
-    public static final RegistryObject<Item> ORE_DETECTOR = ITEMS.register("ore_detector", () -> new OreDetectorItem( new Item.Properties()));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new OreDetectorItem( new Item.Properties().food(ModFoods.BUTTER)));
+    public static final RegistryObject<Item> ORE_DETECTOR = ITEMS.register("ore_detector", () -> new OreDetectorItem( new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item( new Item.Properties().food(ModFoods.BUTTER)));
     public static final RegistryObject<Item> EXTRA_FUEL = ITEMS.register("extra_fuel", () -> new FuelItem( new Item.Properties(), 20000));
-    public static final RegistryObject<Item> EXTRA_PICKAXE = ITEMS.register("extra_pickaxe", () -> new PickaxeItem(Tiers.NETHERITE, new Item.Properties().durability(1000000).fireResistant()));
+    public static final RegistryObject<Item> EXTRA_PICKAXE = ITEMS.register("extra_pickaxe", () -> new PickaxeItem(Tiers.NETHERITE, new Item.Properties().durability(1000000).fireResistant().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
