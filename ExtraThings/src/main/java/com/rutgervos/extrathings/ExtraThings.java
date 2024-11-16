@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.ModCreativeModTabs;
 import com.rutgervos.extrathings.item.ModItems;
+import com.rutgervos.extrathings.loot.ModLootModifiers;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -72,6 +73,8 @@ public class ExtraThings
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

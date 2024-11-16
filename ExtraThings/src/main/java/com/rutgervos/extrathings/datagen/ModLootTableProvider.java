@@ -2,7 +2,6 @@ package com.rutgervos.extrathings.datagen;
 
 import com.rutgervos.extrathings.datagen.loot.ModBlockLootTables;
 
-import io.netty.util.concurrent.CompleteFuture;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;

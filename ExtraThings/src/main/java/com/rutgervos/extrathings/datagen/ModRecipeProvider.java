@@ -5,7 +5,6 @@ import java.util.concurrent.CompletableFuture;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.ModItems;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;

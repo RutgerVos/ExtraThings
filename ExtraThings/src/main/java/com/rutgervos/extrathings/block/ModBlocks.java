@@ -5,7 +5,6 @@ import com.rutgervos.extrathings.block.custom.SoundBlock;
 import com.rutgervos.extrathings.item.ModItems;
 
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.ai.sensing.Sensor;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

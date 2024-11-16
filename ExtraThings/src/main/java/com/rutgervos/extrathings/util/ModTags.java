@@ -22,6 +22,7 @@ public class ModTags {
 
     public static class Items {
 
+        @SuppressWarnings("unused")
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(ExtraThings.MODID, name));
         }

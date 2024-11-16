@@ -1,0 +1,4 @@
+// 1.20.6	2024-11-16T16:09:36.5250949	Global Loot Modifiers : extrathings
+a9934f68c1698a4c37ec4f19810ddbcc00d31944 data/extrathings/loot_modifiers/butter_from_cow.json
+0a6fc8ad763501a32a4fbbf661f161de0385f07a data/extrathings/loot_modifiers/ore_detector_from_jungle_temples.json
+9ad33b4f27590c84129f6515681bbbae2ce212b7 data/forge/loot_modifiers/global_loot_modifiers.json
