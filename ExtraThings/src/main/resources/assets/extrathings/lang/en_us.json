@@ -24,6 +24,8 @@
     "block.extrathings.extra_door": "Extra door",
     "block.extrathings.extra_trapdoor": "Extra trapdoor",
     "block.extrathings.sound_block": "Cowbell block",
+
+    "entity.minecraft.villager.extrathings.soundmaster": "Sound Master",
     
 
     "creativetab.extrathings_tab" : "Extra Things"
