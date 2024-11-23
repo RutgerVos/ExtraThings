@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "extrathings:block/stripped_extra_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "extrathings:block/stripped_extra_log"
+    },
+    "axis=z": {
+      "model": "extrathings:block/stripped_extra_log_horizontal",
+      "x": 90
+    }
+  }
+}

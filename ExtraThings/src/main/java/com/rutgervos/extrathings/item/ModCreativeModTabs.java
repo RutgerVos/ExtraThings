@@ -37,6 +37,11 @@ public class ModCreativeModTabs {
 
         pOutput.accept(ModBlocks.EXTRA_DOOR.get());
         pOutput.accept(ModBlocks.EXTRA_TRAPDOOR.get());
+        pOutput.accept(ModBlocks.EXTRA_PLANKS.get());
+        pOutput.accept(ModBlocks.EXTRA_LOG.get());
+        pOutput.accept(ModBlocks.STRIPPED_EXTRA_LOG.get());
+        pOutput.accept(ModBlocks.STRIPPED_EXTRA_WOOD.get());
+        pOutput.accept(ModBlocks.EXTRA_LEAVES.get());
 
         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
         })

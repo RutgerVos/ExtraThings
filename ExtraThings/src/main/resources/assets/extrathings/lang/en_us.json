@@ -25,6 +25,13 @@
     "block.extrathings.extra_trapdoor": "Extra trapdoor",
     "block.extrathings.sound_block": "Cowbell block",
 
+    "block.extrathings.extra_log": "Extra Log",
+    "block.extrathings.extra_planks": "extra Planks",
+    "block.extrathings.extra_wood": "Extra Wood",
+    "block.extrathings.stripped_extra_log": "Stripped Extra Log",
+    "block.extrathings.stripped_extra_wood": "Stripped Extra Wood",
+    "block.extrathings.extra_leaves": "Extra Leaves",
+
     "entity.minecraft.villager.extrathings.soundmaster": "Sound Master",
     
 

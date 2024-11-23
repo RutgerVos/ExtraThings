@@ -5,10 +5,12 @@ import java.util.concurrent.CompletableFuture;
 import org.jetbrains.annotations.Nullable;
 
 import com.rutgervos.extrathings.ExtraThings;
+import com.rutgervos.extrathings.block.ModBlocks;
 
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -22,6 +24,16 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(Provider p_256380_) {
+
+
+         this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.EXTRA_LOG.get().asItem())
+                .add(ModBlocks.EXTRA_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_EXTRA_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_EXTRA_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.EXTRA_PLANKS.get().asItem());
     }
 
 }
