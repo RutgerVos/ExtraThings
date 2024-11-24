@@ -53,6 +53,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.EXTRA_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.EXTRA_BLOCK.get()), has(ModBlocks.EXTRA_BLOCK.get()))
                 .save(pWriter);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXTRA_PLANKS.get(), 4)
+                .requires(ModBlocks.EXTRA_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.EXTRA_LOG.get()), has(ModBlocks.EXTRA_LOG.get()))
+                .save(pWriter);
     }
 
 }
