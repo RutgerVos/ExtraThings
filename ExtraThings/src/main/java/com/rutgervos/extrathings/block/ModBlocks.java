@@ -3,6 +3,7 @@ package com.rutgervos.extrathings.block;
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.custom.ModFlammableRotatedPillarBlock;
 import com.rutgervos.extrathings.block.custom.SoundBlock;
+import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
 import com.rutgervos.extrathings.item.ModItems;
 
 import net.minecraft.core.BlockPos;
@@ -17,6 +18,8 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -32,6 +35,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
+import net.minecraft.world.effect.MobEffects;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -79,6 +83,15 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> STRIPPED_EXTRA_WOOD = registerBlock("stripped_extra_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+
+            public static final RegistryObject<Block> BLUE_POPPY = registerBlock("blue_poppy",
+            () -> new FlowerBlock(MobEffects.LUCK, 5,BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM).sound(SoundType.GRASS).noOcclusion().noCollission()));
+             public static final RegistryObject<Block> POTTED_BLUE_POPPY = BLOCKS.register("potted_blue_poppy",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BLUE_POPPY,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_ALLIUM).noOcclusion()));
+             public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+            () -> new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
              public static final RegistryObject<Block> EXTRA_PLANKS = registerBlock("extra_planks",

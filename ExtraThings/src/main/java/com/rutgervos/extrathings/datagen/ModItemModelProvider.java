@@ -26,6 +26,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BUTTER);
         simpleItem(ModItems.EXTRA_FUEL);
         simpleItem(ModItems.EXTRA_INGOT);
+        simpleItem(ModItems.STRAWBERRY);
+        simpleItem(ModItems.STRAWBERRY_SEEDS);
 
         simpleBlockItem(ModBlocks.EXTRA_DOOR);
         fenceItem(ModBlocks.EXTRA_FENCE, ModBlocks.EXTRA_BLOCK);
@@ -40,6 +42,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trapdoorItem(ModBlocks.EXTRA_TRAPDOOR);
 
         handheldItem(ModItems.EXTRA_PICKAXE);
+
+        simpleBlockItemBlockTexture(ModBlocks.BLUE_POPPY);
     }
 
       private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -77,6 +81,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(ExtraThings.MODID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(ExtraThings.MODID,"block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

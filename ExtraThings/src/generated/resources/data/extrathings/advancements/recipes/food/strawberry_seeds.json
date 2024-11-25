@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_strawberry": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extrathings:strawberry"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrathings:strawberry_seeds"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_strawberry"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrathings:strawberry_seeds"
+    ]
+  }
+}

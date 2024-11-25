@@ -44,6 +44,9 @@ public class ModCreativeModTabs {
         pOutput.accept(ModBlocks.EXTRA_LEAVES.get());
 
         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+        pOutput.accept(ModBlocks.BLUE_POPPY.get());
+        pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+        pOutput.accept(ModItems.STRAWBERRY.get());
         })
     .build());
 

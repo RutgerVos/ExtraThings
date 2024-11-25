@@ -3,7 +3,10 @@ package com.rutgervos.extrathings.datagen.loot;
 import java.util.Set;
 
 import com.rutgervos.extrathings.block.ModBlocks;
+import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
+import com.rutgervos.extrathings.item.ModItems;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -12,6 +15,8 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -49,6 +54,15 @@ public class ModBlockLootTables extends BlockLootSubProvider{
                 block -> createSlabItemTable(ModBlocks.EXTRA_SLAB.get()));
         this.add(ModBlocks.EXTRA_DOOR.get(),
                 block -> createDoorTable(ModBlocks.EXTRA_DOOR.get()));
+
+        this.dropSelf(ModBlocks.BLUE_POPPY.get());
+        this.add(ModBlocks.POTTED_BLUE_POPPY.get(), createPotFlowerItemTable(ModBlocks.BLUE_POPPY.get()));
+
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCropBlock.AGE, 5));
+        this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
+                ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
     }
 
      protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

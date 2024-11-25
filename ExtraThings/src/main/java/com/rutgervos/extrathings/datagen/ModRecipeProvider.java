@@ -58,6 +58,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.EXTRA_LOG.get())
                 .unlockedBy(getHasName(ModBlocks.EXTRA_LOG.get()), has(ModBlocks.EXTRA_LOG.get()))
                 .save(pWriter);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.STRAWBERRY_SEEDS.get(), 2)
+                .requires(ModItems.STRAWBERRY.get())
+                .unlockedBy(getHasName(ModItems.STRAWBERRY.get()), has(ModItems.STRAWBERRY.get()))
+                .save(pWriter);
     }
 
 }

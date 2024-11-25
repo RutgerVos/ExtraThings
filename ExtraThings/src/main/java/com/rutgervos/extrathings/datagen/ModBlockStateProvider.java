@@ -1,12 +1,16 @@
 package com.rutgervos.extrathings.datagen;
 
+import java.util.function.Function;
+
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
+import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -16,7 +20,9 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -62,6 +68,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         
                 leavesBlock(ModBlocks.EXTRA_LEAVES);
 
+                simpleBlockWithItem(ModBlocks.BLUE_POPPY.get(), models().cross(blockTexture(ModBlocks.BLUE_POPPY.get()).getPath(),
+                blockTexture(ModBlocks.BLUE_POPPY.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_BLUE_POPPY.get(), models().singleTexture("potted_blue_poppy", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.BLUE_POPPY.get())).renderType("cutout"));
+                makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+
+    }
+
+    public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> strawberryStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] strawberryStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()),
+                new ResourceLocation(ExtraThings.MODID, "block/" + textureName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
      private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
