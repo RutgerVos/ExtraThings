@@ -6,6 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
+import com.rutgervos.extrathings.item.ModItems;
 
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
@@ -34,6 +35,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.EXTRA_PLANKS.get().asItem());
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.EXTRA_HELMET.get())
+                .add(ModItems.EXTRA_CHESTPLATE.get())
+                .add(ModItems.EXTRA_LEGGINGS.get())
+                .add(ModItems.EXTRA_BOOTS.get());        
     }
 
 }

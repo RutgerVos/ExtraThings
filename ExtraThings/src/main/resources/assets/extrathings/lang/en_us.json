@@ -15,6 +15,11 @@
 
     "item.extrathings.strawberry": "Strawberry",
 
+    "item.extrathings.extra_helmet": "Extra Helmet",
+    "item.extrathings.extra_chestplate": "Extra Chestplate",
+    "item.extrathings.extra_leggings": "Extra Leggings",
+    "item.extrathings.extra_boots": "Extra Boots",
+
     "block.extrathings.extra_block": "Block of Extra ingots",
 
     "block.extrathings.extra_ore": "Extra ore",

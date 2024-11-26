@@ -47,6 +47,10 @@ public class ModCreativeModTabs {
         pOutput.accept(ModBlocks.BLUE_POPPY.get());
         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
         pOutput.accept(ModItems.STRAWBERRY.get());
+        pOutput.accept(ModItems.EXTRA_HELMET.get());
+        pOutput.accept(ModItems.EXTRA_CHESTPLATE.get());
+        pOutput.accept(ModItems.EXTRA_LEGGINGS.get());
+        pOutput.accept(ModItems.EXTRA_BOOTS.get());
         })
     .build());
 
