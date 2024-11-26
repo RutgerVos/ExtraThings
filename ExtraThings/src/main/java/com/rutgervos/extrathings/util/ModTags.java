@@ -13,6 +13,7 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> ORE_DETECTOR_VALUABLES = tag("ore_detector_valuables");
         public static final TagKey<Block> NEEDS_EXTRA_TOOL = tag("needs_extra_tool");
+        public static final TagKey<Block> INCORRECT_FOR_EXTRA_TOOL = tag("incorrect_for_alexandrite_tool");
 
 
         private static TagKey<Block> tag(String name) {

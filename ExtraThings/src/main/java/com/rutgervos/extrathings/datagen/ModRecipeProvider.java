@@ -49,6 +49,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
                 .save(pWriter);
 
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRA_AXE.get())
+                .pattern(" SS")
+                .pattern(" WS")
+                .pattern(" W ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRA_SHOVEL.get())
+                .pattern(" S ")
+                .pattern(" W ")
+                .pattern(" W ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRA_HOE.get())
+                .pattern(" SS")
+                .pattern(" W ")
+                .pattern(" W ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRA_SWORD.get())
+                .pattern(" S ")
+                .pattern(" S ")
+                .pattern(" W ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
                  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.EXTRA_INGOT.get(), 9)
                 .requires(ModBlocks.EXTRA_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.EXTRA_BLOCK.get()), has(ModBlocks.EXTRA_BLOCK.get()))

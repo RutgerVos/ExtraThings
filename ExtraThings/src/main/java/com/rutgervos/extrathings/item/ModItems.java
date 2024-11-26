@@ -7,9 +7,13 @@ import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,6 +43,18 @@ public class ModItems {
     public static final RegistryObject<Item> EXTRA_BOOTS = ITEMS.register("extra_boots",
             () -> new ArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+     public static final RegistryObject<Item> EXTRA_SWORD = ITEMS.register("extra_sword",
+            () -> new SwordItem(ModToolTiers.EXTRA, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.EXTRA, 3, -2.4f))));
+    public static final RegistryObject<Item> EXTRA_SHOVEL = ITEMS.register("extra_shovel",
+            () -> new ShovelItem(ModToolTiers.EXTRA, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.EXTRA, 1.5f, -3.0f))));
+     public static final RegistryObject<Item> EXTRA_AXE = ITEMS.register("extra_axe",
+            () -> new AxeItem(ModToolTiers.EXTRA, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.EXTRA, 6, -3.2f))));
+    public static final RegistryObject<Item> EXTRA_HOE = ITEMS.register("extra_hoe",
+            () -> new HoeItem(ModToolTiers.EXTRA, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.EXTRA, 0, -3.0f))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

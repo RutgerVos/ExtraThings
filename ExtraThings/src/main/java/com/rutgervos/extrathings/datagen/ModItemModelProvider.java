@@ -77,6 +77,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.EXTRA_CHESTPLATE);
         simpleItem(ModItems.EXTRA_LEGGINGS);
         simpleItem(ModItems.EXTRA_BOOTS);
+
+        handheldItem(ModItems.EXTRA_AXE);
+        handheldItem(ModItems.EXTRA_SHOVEL);
+        handheldItem(ModItems.EXTRA_SWORD);
+        handheldItem(ModItems.EXTRA_HOE);
     }
 
     
