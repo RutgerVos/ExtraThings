@@ -23,6 +23,9 @@
     "item.extrathings.extra_chestplate": "Extra Chestplate",
     "item.extrathings.extra_leggings": "Extra Leggings",
     "item.extrathings.extra_boots": "Extra Boots",
+    "item.minecraft.potion.effect.wither_potion": "Wither potion",
+    "item.minecraft.splash_potion.effect.wither_potion": "Wither Splash Potion",
+    "item.minecraft.lingering_potion.effect.wither_potion": "Wither Lingering Potion",
 
     "block.extrathings.extra_block": "Block of Extra ingots",
 

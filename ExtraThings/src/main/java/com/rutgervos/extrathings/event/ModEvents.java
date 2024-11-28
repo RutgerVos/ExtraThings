@@ -5,6 +5,7 @@ import java.util.List;
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.ModItems;
+import com.rutgervos.extrathings.potion.ModPotions;
 import com.rutgervos.extrathings.villager.ModVillagers;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -13,11 +14,15 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
 
 @Mod.EventBusSubscriber(modid = ExtraThings.MODID)
 public class ModEvents {
@@ -69,5 +74,12 @@ public class ModEvents {
                 new ItemCost(net.minecraft.world.item.Items.EMERALD, 24),
                 new ItemStack(ModItems.ORE_DETECTOR.get(), 1),
                 2, 12, 0.15f));
+    }
+
+     @SubscribeEvent
+    public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event) {
+        PotionBrewing.Builder builder = event.getBuilder();
+
+        builder.addMix(Potions.AWKWARD, Items.WITHER_SKELETON_SKULL, ModPotions.WITHER_POTION.getHolder().get());
     }
 }

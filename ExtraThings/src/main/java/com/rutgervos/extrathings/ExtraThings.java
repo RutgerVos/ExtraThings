@@ -5,6 +5,7 @@ import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.ModCreativeModTabs;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.loot.ModLootModifiers;
+import com.rutgervos.extrathings.potion.ModPotions;
 import com.rutgervos.extrathings.villager.ModVillagers;
 
 import net.minecraft.client.Minecraft;
@@ -78,6 +79,7 @@ public class ExtraThings
 
         ModLootModifiers.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
