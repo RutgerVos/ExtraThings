@@ -86,7 +86,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     
      private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MOD_ID = ExtraThings.MODID; // Change this to your mod id
+        final String MODID = ExtraThings.MODID; // Change this to your mod id
 
         if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {

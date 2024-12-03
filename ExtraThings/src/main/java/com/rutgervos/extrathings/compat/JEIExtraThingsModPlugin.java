@@ -18,13 +18,11 @@ public class JEIExtraThingsModPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        // TODO Auto-generated method stub
         IModPlugin.super.registerCategories(registration);
     }
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        // TODO Auto-generated method stub
         IModPlugin.super.registerGuiHandlers(registration);
     }
 }

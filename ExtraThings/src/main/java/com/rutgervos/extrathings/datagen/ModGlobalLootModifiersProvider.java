@@ -25,6 +25,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("butter_from_cow", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/cow")).build(), 
                 LootItemRandomChanceCondition.randomChance(0.65f).build()}, ModItems.BUTTER.get()));
+                add("strawberry_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
+                    new LootTableIdCondition.Builder(new ResourceLocation("blocks/short_grass")).build(), 
+                    LootItemRandomChanceCondition.randomChance(0.65f).build()}, ModItems.STRAWBERRY_SEEDS.get()));
 
                 add("ore_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[] {
                     new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build() }, ModItems.ORE_DETECTOR.get()));

@@ -21,6 +21,7 @@ public class ModArmorItem extends ArmorItem {
                     .put(ModArmorMaterials.EXTRA_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(MobEffects.JUMP, 200, 1, false, false),
                             new MobEffectInstance(MobEffects.GLOWING, 200, 1, false, false),
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 3, false, false),
                             new MobEffectInstance(MobEffects.HEALTH_BOOST, 200, 1, false, false)))
                     .build();
 
