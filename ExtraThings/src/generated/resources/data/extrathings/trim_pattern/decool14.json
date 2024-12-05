@@ -1,0 +1,8 @@
+{
+  "asset_id": "extrathings:decool14",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.extrathings.decool14"
+  },
+  "template_item": "extrathings:decool14_armor_trim_smithing_template"
+}

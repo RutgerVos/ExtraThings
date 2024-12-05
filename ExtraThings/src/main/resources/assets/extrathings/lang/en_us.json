@@ -26,6 +26,7 @@
     "item.minecraft.potion.effect.wither_potion": "Wither potion",
     "item.minecraft.splash_potion.effect.wither_potion": "Wither Splash Potion",
     "item.minecraft.lingering_potion.effect.wither_potion": "Wither Lingering Potion",
+    "item.extrathings.decool14_armor_trim_smithing_template": "Decool14 Trim Template",
 
     "block.extrathings.extra_block": "Block of Extra ingots",
 
@@ -51,6 +52,9 @@
     "block.extrathings.blue_poppy": "Blue Poppy",
 
     "entity.minecraft.villager.extrathings.soundmaster": "Sound Master",
+
+    "trim_pattern.extrathing.decool14": "Decool14 Armor Trim",
+  "trim_material.extrathings.extra_ingot": "Extra_ingot Material",
     
 
     "creativetab.extrathings_tab" : "Extra Things"

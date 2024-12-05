@@ -39,7 +39,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.EXTRA_HELMET.get())
                 .add(ModItems.EXTRA_CHESTPLATE.get())
                 .add(ModItems.EXTRA_LEGGINGS.get())
-                .add(ModItems.EXTRA_BOOTS.get());        
+                .add(ModItems.EXTRA_BOOTS.get()); 
+                
+                this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.EXTRA_INGOT.get());
+
+        this.tag(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.DECOOL14_SMITHING_TEMPLATE.get());
     }
 
 }

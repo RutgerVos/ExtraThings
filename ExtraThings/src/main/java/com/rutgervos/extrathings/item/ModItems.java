@@ -6,6 +6,7 @@ import com.rutgervos.extrathings.item.custom.FuelItem;
 import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -55,6 +57,8 @@ public class ModItems {
     public static final RegistryObject<Item> EXTRA_HOE = ITEMS.register("extra_hoe",
             () -> new HoeItem(ModToolTiers.EXTRA, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.EXTRA, 0, -3.0f))));
+    public static final RegistryObject<Item> DECOOL14_SMITHING_TEMPLATE = ITEMS.register("decool14_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "decool14")));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

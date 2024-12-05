@@ -55,6 +55,7 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.EXTRA_CHESTPLATE.get());
         pOutput.accept(ModItems.EXTRA_LEGGINGS.get());
         pOutput.accept(ModItems.EXTRA_BOOTS.get());
+        pOutput.accept(ModItems.DECOOL14_SMITHING_TEMPLATE.get());
         })
     .build());
 

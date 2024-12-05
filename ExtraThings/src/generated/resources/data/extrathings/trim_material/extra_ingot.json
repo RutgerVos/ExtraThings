@@ -1,0 +1,9 @@
+{
+  "asset_name": "extra_ingot",
+  "description": {
+    "color": "#031CFC",
+    "translate": "trim_material.extrathings.extra_ingot"
+  },
+  "ingredient": "extrathings:extra_ingot",
+  "item_model_index": 0.8
+}

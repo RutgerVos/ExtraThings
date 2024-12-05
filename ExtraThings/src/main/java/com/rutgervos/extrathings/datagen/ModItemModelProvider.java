@@ -82,11 +82,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.EXTRA_SHOVEL);
         handheldItem(ModItems.EXTRA_SWORD);
         handheldItem(ModItems.EXTRA_HOE);
+
+        basicItem(ModItems.DECOOL14_SMITHING_TEMPLATE.get());
     }
 
     
-     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MODID = ExtraThings.MODID; // Change this to your mod id
+    private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
+        final String MOD_ID = ExtraThings.MODID; // Change this to your mod id
 
         if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
@@ -124,7 +126,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                         .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace()  + ":item/" + trimNameResLoc.getPath()))
                         .predicate(mcLoc("trim_type"), trimValue).end()
                         .texture("layer0",
-                                ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID,
+                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
                                         "item/" + itemRegistryObject.getId().getPath()));
             });
         }

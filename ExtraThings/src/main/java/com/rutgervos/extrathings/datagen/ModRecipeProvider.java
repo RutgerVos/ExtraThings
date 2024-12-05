@@ -2,6 +2,7 @@ package com.rutgervos.extrathings.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.ModItems;
 
@@ -12,6 +13,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraft.world.item.Items;
@@ -99,6 +101,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.STRAWBERRY.get())
                 .unlockedBy(getHasName(ModItems.STRAWBERRY.get()), has(ModItems.STRAWBERRY.get()))
                 .save(pWriter);
+
+                trimSmithing(pWriter, ModItems.DECOOL14_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "decool14"));
     }
 
 }
