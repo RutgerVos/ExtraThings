@@ -81,5 +81,6 @@ public class ModEvents {
         PotionBrewing.Builder builder = event.getBuilder();
 
         builder.addMix(Potions.AWKWARD, Items.WITHER_SKELETON_SKULL, ModPotions.WITHER_POTION.getHolder().get());
+        builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.getHolder().get());
     }
 }

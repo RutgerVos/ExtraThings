@@ -2,6 +2,7 @@ package com.rutgervos.extrathings;
 
 import com.mojang.logging.LogUtils;
 import com.rutgervos.extrathings.block.ModBlocks;
+import com.rutgervos.extrathings.effect.ModEffects;
 import com.rutgervos.extrathings.item.ModCreativeModTabs;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.loot.ModLootModifiers;
@@ -80,6 +81,7 @@ public class ExtraThings
         ModLootModifiers.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModPotions.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
