@@ -2,6 +2,7 @@
   "values": [
     "extrathings:extra_log",
     "extrathings:extra_wood",
+    "extrathings:extra_sapling",
     "extrathings:stripped_extra_log",
     "extrathings:stripped_extra_wood"
   ]

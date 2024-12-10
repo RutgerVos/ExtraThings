@@ -84,6 +84,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.EXTRA_HOE);
 
         basicItem(ModItems.DECOOL14_SMITHING_TEMPLATE.get());
+        saplingItem(ModBlocks.EXTRA_SAPLING);
     }
 
     
@@ -130,6 +131,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                                         "item/" + itemRegistryObject.getId().getPath()));
             });
         }
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID,"block/" + item.getId().getPath()));
     }
 
       private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

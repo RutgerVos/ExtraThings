@@ -45,6 +45,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.EXTRA_LOG.get())
                 .add(ModBlocks.EXTRA_WOOD.get())
+                .add(ModBlocks.EXTRA_SAPLING.get())
                 .add(ModBlocks.STRIPPED_EXTRA_LOG.get())
                 .add(ModBlocks.STRIPPED_EXTRA_WOOD.get());
 

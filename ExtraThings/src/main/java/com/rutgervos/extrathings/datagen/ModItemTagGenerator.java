@@ -30,6 +30,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
          this.tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.EXTRA_LOG.get().asItem())
                 .add(ModBlocks.EXTRA_WOOD.get().asItem())
+                .add(ModBlocks.EXTRA_SAPLING.get().asItem())
                 .add(ModBlocks.STRIPPED_EXTRA_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_EXTRA_WOOD.get().asItem());
 

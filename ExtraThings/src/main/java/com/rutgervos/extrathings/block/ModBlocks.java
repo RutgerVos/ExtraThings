@@ -5,6 +5,7 @@ import com.rutgervos.extrathings.block.custom.ModFlammableRotatedPillarBlock;
 import com.rutgervos.extrathings.block.custom.SoundBlock;
 import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
 import com.rutgervos.extrathings.item.ModItems;
+import com.rutgervos.extrathings.worldgen.tree.ModTreeGrowers;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -129,6 +131,9 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
+            public static final RegistryObject<Block> EXTRA_SAPLING = registerBlock("extra_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.EXTRA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

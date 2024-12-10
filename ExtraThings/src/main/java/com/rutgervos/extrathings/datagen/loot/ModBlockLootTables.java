@@ -47,8 +47,9 @@ public class ModBlockLootTables extends BlockLootSubProvider{
         this.dropSelf(ModBlocks.EXTRA_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_EXTRA_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_EXTRA_WOOD.get());
+        this.dropSelf(ModBlocks.EXTRA_SAPLING.get());
         this.add(ModBlocks.EXTRA_LEAVES.get(), block ->
-        createLeavesDrops(block, ModBlocks.EXTRA_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
+        createLeavesDrops(block, ModBlocks.EXTRA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.add(ModBlocks.EXTRA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.EXTRA_SLAB.get()));

@@ -58,6 +58,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(ExtraThings.MODID, "block/stripped_extra_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_EXTRA_WOOD.get()), blockTexture(ModBlocks.STRIPPED_EXTRA_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_EXTRA_LOG.get()));
+                saplingBlock(ModBlocks.EXTRA_SAPLING);
 
                 blockItem(ModBlocks.EXTRA_LOG);
                 blockItem(ModBlocks.EXTRA_WOOD);
@@ -74,6 +75,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.BLUE_POPPY.get())).renderType("cutout"));
                 makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
 
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {
