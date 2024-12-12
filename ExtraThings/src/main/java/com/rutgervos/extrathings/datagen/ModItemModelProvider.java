@@ -84,6 +84,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.EXTRA_HOE);
 
         basicItem(ModItems.DECOOL14_SMITHING_TEMPLATE.get());
+        basicItem(ModItems.EXTRA_HORSE_ARMOR.get());
         saplingItem(ModBlocks.EXTRA_SAPLING);
     }
 

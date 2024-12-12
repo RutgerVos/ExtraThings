@@ -7,6 +7,7 @@ import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
@@ -59,6 +60,9 @@ public class ModItems {
                     .attributes(HoeItem.createAttributes(ModToolTiers.EXTRA, 0, -3.0f))));
     public static final RegistryObject<Item> DECOOL14_SMITHING_TEMPLATE = ITEMS.register("decool14_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "decool14")));
+            public static final RegistryObject<Item> EXTRA_HORSE_ARMOR = ITEMS.register("extra_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
