@@ -58,6 +58,7 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.EXTRA_BOOTS.get());
         pOutput.accept(ModItems.DECOOL14_SMITHING_TEMPLATE.get());
         pOutput.accept(ModItems.EXTRA_HORSE_ARMOR.get());
+        pOutput.accept(ModItems.EXTRA_HAMMER.get());
         })
     .build());
 
