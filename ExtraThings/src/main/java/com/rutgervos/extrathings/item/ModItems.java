@@ -2,6 +2,7 @@ package com.rutgervos.extrathings.item;
 
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
+import com.rutgervos.extrathings.item.custom.ChiselItem;
 import com.rutgervos.extrathings.item.custom.FuelItem;
 import com.rutgervos.extrathings.item.custom.HammerItem;
 import com.rutgervos.extrathings.item.custom.ModArmorItem;
@@ -67,6 +68,8 @@ public class ModItems {
          public static final RegistryObject<Item> EXTRA_HAMMER = ITEMS.register("extra_hammer",
             () -> new HammerItem(ModToolTiers.EXTRA, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.EXTRA, 7, -3.5f))));
+        public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
+            () -> new ChiselItem(new Item.Properties().durability(100)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
