@@ -5,6 +5,7 @@ import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.custom.ChiselItem;
 import com.rutgervos.extrathings.item.custom.FuelItem;
 import com.rutgervos.extrathings.item.custom.HammerItem;
+import com.rutgervos.extrathings.item.custom.InventoryCobbleGenerator;
 import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 
@@ -70,6 +71,8 @@ public class ModItems {
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.EXTRA, 7, -3.5f))));
         public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(100)));
+        public static final RegistryObject<Item> COBBLESTONE_GENERATOR = ITEMS.register("cobblestone_generator",
+         () -> new InventoryCobbleGenerator(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

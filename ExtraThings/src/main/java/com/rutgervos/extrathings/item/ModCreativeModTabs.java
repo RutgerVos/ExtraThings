@@ -60,6 +60,7 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.EXTRA_HORSE_ARMOR.get());
         pOutput.accept(ModItems.EXTRA_HAMMER.get());
         pOutput.accept(ModItems.CHISEL.get());
+        pOutput.accept(ModItems.COBBLESTONE_GENERATOR.get());
         })
     .build());
 
