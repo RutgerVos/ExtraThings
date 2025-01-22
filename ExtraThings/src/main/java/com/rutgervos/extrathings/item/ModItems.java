@@ -72,7 +72,7 @@ public class ModItems {
         public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(100)));
         public static final RegistryObject<Item> COBBLESTONE_GENERATOR = ITEMS.register("cobblestone_generator",
-         () -> new InventoryCobbleGenerator(new Item.Properties()));
+         () -> new InventoryCobbleGenerator(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
