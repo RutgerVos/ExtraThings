@@ -87,6 +87,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
                 .save(pWriter);
 
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRA_HAMMER.get())
+                .pattern("SSS")
+                .pattern("SWS")
+                .pattern(" W ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
                 ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COBBLESTONE_GENERATOR.get())
                 .pattern("   ")
                 .pattern("WCL")
