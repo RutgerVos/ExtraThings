@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "extrathings:extra_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extrathings:extra_button"
+  }
+}

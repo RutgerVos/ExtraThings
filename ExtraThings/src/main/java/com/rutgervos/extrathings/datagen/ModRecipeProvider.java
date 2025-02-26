@@ -42,6 +42,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
                 .save(pWriter);
 
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXTRA_DOOR.get())
+                .pattern("SS ")
+                .pattern("SS ")
+                .pattern("SS ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXTRA_PRESSURE_PLATE.get())
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("SS ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
                 ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRA_PICKAXE.get())
                 .pattern("SSS")
                 .pattern(" W ")
@@ -113,6 +129,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
                 ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXTRA_PLANKS.get(), 4)
                 .requires(ModBlocks.EXTRA_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.EXTRA_LOG.get()), has(ModBlocks.EXTRA_LOG.get()))
+                .save(pWriter);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, ModBlocks.EXTRA_BUTTON.get(), 1)
+                .requires(ModItems.EXTRA_INGOT.get())
                 .unlockedBy(getHasName(ModBlocks.EXTRA_LOG.get()), has(ModBlocks.EXTRA_LOG.get()))
                 .save(pWriter);
 
