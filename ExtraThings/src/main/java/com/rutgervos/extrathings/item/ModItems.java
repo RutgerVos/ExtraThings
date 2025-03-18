@@ -8,6 +8,7 @@ import com.rutgervos.extrathings.item.custom.HammerItem;
 import com.rutgervos.extrathings.item.custom.InventoryCobbleGenerator;
 import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
+import com.rutgervos.extrathings.item.custom.StaffOfExtra;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.AnimalArmorItem;
@@ -73,6 +74,9 @@ public class ModItems {
             () -> new ChiselItem(new Item.Properties().durability(100)));
         public static final RegistryObject<Item> COBBLESTONE_GENERATOR = ITEMS.register("cobblestone_generator",
          () -> new InventoryCobbleGenerator(new Item.Properties().stacksTo(1)));
+         public static final RegistryObject<Item> STAFF_OFF_EXTRA = ITEMS.register("staff_off_extra",
+         () -> new StaffOfExtra(new Item.Properties().stacksTo(1)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

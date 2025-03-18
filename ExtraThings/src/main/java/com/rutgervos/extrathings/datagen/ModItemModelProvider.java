@@ -85,6 +85,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.EXTRA_SWORD);
         handheldItem(ModItems.EXTRA_HOE);
         handheldItem(ModItems.EXTRA_HAMMER);
+        handheldItem(ModItems.STAFF_OFF_EXTRA);
 
         basicItem(ModItems.DECOOL14_SMITHING_TEMPLATE.get());
         basicItem(ModItems.EXTRA_HORSE_ARMOR.get());
