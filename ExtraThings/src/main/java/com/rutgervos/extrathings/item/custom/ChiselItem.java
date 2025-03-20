@@ -22,7 +22,9 @@ public class ChiselItem extends Item {
                     Blocks.END_STONE, Blocks.END_STONE_BRICKS,
                     Blocks.DEEPSLATE, Blocks.DEEPSLATE_BRICKS,
                     Blocks.IRON_BLOCK, Blocks.DIAMOND_BLOCK,
-                    Blocks.DIRT, ModBlocks.EXTRA_BLOCK.get()
+                    Blocks.DIRT, ModBlocks.EXTRA_BLOCK.get(),
+                    Blocks.DIAMOND_BLOCK, Blocks.COAL_BLOCK,
+                    Blocks.COAL_BLOCK, Blocks.DIAMOND_BLOCK
             );
 
     public ChiselItem(Properties pProperties) {
