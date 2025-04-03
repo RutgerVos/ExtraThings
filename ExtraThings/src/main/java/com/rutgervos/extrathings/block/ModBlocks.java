@@ -2,6 +2,7 @@ package com.rutgervos.extrathings.block;
 
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.custom.ModFlammableRotatedPillarBlock;
+import com.rutgervos.extrathings.block.custom.PedestalBlock;
 import com.rutgervos.extrathings.block.custom.SoundBlock;
 import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
 import com.rutgervos.extrathings.item.ModItems;
@@ -134,6 +135,9 @@ public class ModBlocks {
 
             public static final RegistryObject<Block> EXTRA_SAPLING = registerBlock("extra_sapling",
             () -> new SaplingBlock(ModTreeGrowers.EXTRA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+            public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

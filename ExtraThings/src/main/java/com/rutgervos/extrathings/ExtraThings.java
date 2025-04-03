@@ -2,6 +2,8 @@ package com.rutgervos.extrathings;
 
 import com.mojang.logging.LogUtils;
 import com.rutgervos.extrathings.block.ModBlocks;
+import com.rutgervos.extrathings.block.entity.ModBlockEntities;
+import com.rutgervos.extrathings.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.rutgervos.extrathings.effect.ModEffects;
 import com.rutgervos.extrathings.item.ModCreativeModTabs;
 import com.rutgervos.extrathings.item.ModItems;
@@ -22,6 +24,7 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -82,6 +85,7 @@ public class ExtraThings
         ModVillagers.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -142,9 +146,15 @@ public class ExtraThings
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }
