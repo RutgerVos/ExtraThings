@@ -9,9 +9,12 @@ import com.rutgervos.extrathings.item.ModCreativeModTabs;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.loot.ModLootModifiers;
 import com.rutgervos.extrathings.potion.ModPotions;
+import com.rutgervos.extrathings.screen.ModMenuTypes;
+import com.rutgervos.extrathings.screen.custom.PedestalScreen;
 import com.rutgervos.extrathings.villager.ModVillagers;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -86,6 +89,7 @@ public class ExtraThings
         ModPotions.register(modEventBus);
         ModEffects.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -150,6 +154,8 @@ public class ExtraThings
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
         }
 
         @SubscribeEvent

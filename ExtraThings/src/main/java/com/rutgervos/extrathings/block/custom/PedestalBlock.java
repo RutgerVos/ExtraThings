@@ -4,10 +4,13 @@ import com.mojang.serialization.MapCodec;
 import com.rutgervos.extrathings.block.entity.custom.PedestalBlockEntity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -23,7 +26,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class PedestalBlock extends BaseEntityBlock {
- public static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 13, 14);
+    public static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 13, 14);
     public static final MapCodec<PedestalBlock> CODEC = simpleCodec(PedestalBlock::new);
 
     public PedestalBlock(Properties pProperties) {
@@ -67,6 +70,15 @@ public class PedestalBlock extends BaseEntityBlock {
     protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel,
                                               BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
         if(pLevel.getBlockEntity(pPos) instanceof PedestalBlockEntity pedestalBlockEntity) {
+            if(pPlayer.isCrouching() && !pLevel.isClientSide()) {
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(pedestalBlockEntity, Component.literal("Pedestal")), pPos);
+                return ItemInteractionResult.SUCCESS;
+            }
+
+            if(pPlayer.isCrouching() && pLevel.isClientSide()) {
+                return ItemInteractionResult.SUCCESS;
+            }
+
             if(pedestalBlockEntity.inventory.getStackInSlot(0).isEmpty() && !pStack.isEmpty()) {
                 pedestalBlockEntity.inventory.insertItem(0, pStack.copy(), false);
                 pStack.shrink(1);
