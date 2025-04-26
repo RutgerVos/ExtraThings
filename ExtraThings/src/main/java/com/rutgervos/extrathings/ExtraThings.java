@@ -9,6 +9,7 @@ import com.rutgervos.extrathings.item.ModCreativeModTabs;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.loot.ModLootModifiers;
 import com.rutgervos.extrathings.potion.ModPotions;
+import com.rutgervos.extrathings.recipe.ModRecipes;
 import com.rutgervos.extrathings.screen.ModMenuTypes;
 import com.rutgervos.extrathings.screen.custom.ExtraChamberScreen;
 import com.rutgervos.extrathings.screen.custom.PedestalScreen;
@@ -91,6 +92,7 @@ public class ExtraThings
         ModEffects.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

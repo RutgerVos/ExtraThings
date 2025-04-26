@@ -56,7 +56,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock(((RotatedPillarBlock) ModBlocks.EXTRA_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.EXTRA_WOOD.get()), blockTexture(ModBlocks.EXTRA_LOG.get()), blockTexture(ModBlocks.EXTRA_LOG.get()));
         axisBlock((RotatedPillarBlock) (ModBlocks.STRIPPED_EXTRA_LOG.get()), blockTexture(ModBlocks.STRIPPED_EXTRA_LOG.get()),
-                new ResourceLocation(ExtraThings.MODID, "block/stripped_extra_log_top"));
+        ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "block/stripped_extra_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_EXTRA_WOOD.get()), blockTexture(ModBlocks.STRIPPED_EXTRA_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_EXTRA_LOG.get()));
                 saplingBlock(ModBlocks.EXTRA_SAPLING);
@@ -72,7 +72,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
                 simpleBlockWithItem(ModBlocks.BLUE_POPPY.get(), models().cross(blockTexture(ModBlocks.BLUE_POPPY.get()).getPath(),
                 blockTexture(ModBlocks.BLUE_POPPY.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_BLUE_POPPY.get(), models().singleTexture("potted_blue_poppy", new ResourceLocation("flower_pot_cross"), "plant",
+        simpleBlockWithItem(ModBlocks.POTTED_BLUE_POPPY.get(), models().singleTexture("potted_blue_poppy", ResourceLocation.parse("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.BLUE_POPPY.get())).renderType("cutout"));
                 makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
 
@@ -92,14 +92,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private ConfiguredModel[] strawberryStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()),
-                new ResourceLocation(ExtraThings.MODID, "block/" + textureName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "block/" + textureName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }
 
      private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
-                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 

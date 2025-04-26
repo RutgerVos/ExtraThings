@@ -6,6 +6,7 @@ import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.loot.AddItemModifier;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -20,17 +21,17 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         super(output, ExtraThings.MODID, registries);
     }
     @Override
-    protected void start() {
+    protected void start(HolderLookup.Provider registries) {
 
         add("butter_from_cow", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("entities/cow")).build(), 
+                new LootTableIdCondition.Builder(ResourceLocation.parse("entities/cow")).build(), 
                 LootItemRandomChanceCondition.randomChance(0.65f).build()}, ModItems.BUTTER.get()));
                 add("strawberry_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
-                    new LootTableIdCondition.Builder(new ResourceLocation("blocks/short_grass")).build(), 
+                    new LootTableIdCondition.Builder(ResourceLocation.parse("blocks/short_grass")).build(), 
                     LootItemRandomChanceCondition.randomChance(0.65f).build()}, ModItems.STRAWBERRY_SEEDS.get()));
 
                 add("ore_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[] {
-                    new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build() }, ModItems.ORE_DETECTOR.get()));
+                    new LootTableIdCondition.Builder(ResourceLocation.parse("chests/jungle_temple")).build() }, ModItems.ORE_DETECTOR.get()));
     
     }
 

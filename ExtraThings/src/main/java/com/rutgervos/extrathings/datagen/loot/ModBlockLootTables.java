@@ -7,6 +7,7 @@ import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
 import com.rutgervos.extrathings.item.ModItems;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -19,13 +20,12 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
-import net.minecraft.world.item.enchantment.Enchantments;
 
-public class ModBlockLootTables extends BlockLootSubProvider{
-
-       public ModBlockLootTables() {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
-    }
+public class ModBlockLootTables extends BlockLootSubProvider {
+        
+        protected ModBlockLootTables(HolderLookup.Provider pRegistries) {
+            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pRegistries);
+        }
 
     @Override
     protected void generate() {
@@ -74,7 +74,7 @@ public class ModBlockLootTables extends BlockLootSubProvider{
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
-                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.FORTUNE))));
+                                .apply(ApplyBonusCount.addOreBonusCount(null))));
     }
 
      @Override

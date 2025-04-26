@@ -2,6 +2,9 @@ package com.rutgervos.extrathings.block.entity.custom;
 
 import com.rutgervos.extrathings.block.entity.ModBlockEntities;
 import com.rutgervos.extrathings.item.ModItems;
+import com.rutgervos.extrathings.recipe.ExtraChamberRecipe;
+import com.rutgervos.extrathings.recipe.ExtraChamberRecipeInput;
+import com.rutgervos.extrathings.recipe.ModRecipes;
 import com.rutgervos.extrathings.screen.custom.ExtraChamberMenu;
 
 import net.minecraft.core.BlockPos;
@@ -20,12 +23,16 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+
+import java.util.Optional;
+
 import org.jetbrains.annotations.Nullable;
 
 public class ExtraChamberBlockEntity extends BlockEntity implements  MenuProvider {
@@ -145,7 +152,8 @@ public final ItemStackHandler itemHandler = new ItemStackHandler(2) {
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.ORE_DETECTOR.get());
+        Optional<RecipeHolder<ExtraChamberRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().output();
 
         itemHandler.extractItem(INPUT_SLOT, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -160,12 +168,19 @@ public final ItemStackHandler itemHandler = new ItemStackHandler(2) {
         progress++;
     }
 
-    private boolean hasRecipe() {
-        Item input = ModItems.EXTRA_SHOVEL.get();
-        ItemStack output = new ItemStack(ModItems.ORE_DETECTOR.get());
+   private boolean hasRecipe() {
+        Optional<RecipeHolder<ExtraChamberRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
 
-        return itemHandler.getStackInSlot(INPUT_SLOT).is(input) && canInsertItemIntoOutputSlot(output)
-                && canInsertAmountIntoOutputSlot(output.getCount());
+        ItemStack output = recipe.get().value().output();
+        return canInsertItemIntoOutputSlot(output) && canInsertAmountIntoOutputSlot(output.getCount());
+    }
+
+    private Optional<RecipeHolder<ExtraChamberRecipe>> getCurrentRecipe() {
+        return this.level.getRecipeManager()
+                .getRecipeFor(ModRecipes.EXTRA_CHAMBER_TYPE.get(), new ExtraChamberRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
