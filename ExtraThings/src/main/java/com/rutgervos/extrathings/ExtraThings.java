@@ -5,6 +5,7 @@ import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.block.entity.ModBlockEntities;
 import com.rutgervos.extrathings.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.rutgervos.extrathings.effect.ModEffects;
+import com.rutgervos.extrathings.enchantment.ModEnchantmentEffects;
 import com.rutgervos.extrathings.item.ModCreativeModTabs;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.loot.ModLootModifiers;
@@ -93,6 +94,7 @@ public class ExtraThings
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

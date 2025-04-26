@@ -61,7 +61,7 @@ public class ModEvents {
                     new ItemStack(ModBlocks.SOUND_BLOCK.get(), 1),  
                     10, 8, 0.02f));
 
-                    trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemCost(ModBlocks.SOUND_BLOCK.get(), 1), 
                         new ItemStack(net.minecraft.world.item.Items.JUKEBOX, 1),  
                         10, 8, 0.02f));

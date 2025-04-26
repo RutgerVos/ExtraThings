@@ -15,6 +15,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraft.world.item.Items;
 
@@ -33,6 +34,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, EXTRA_SMELTABLES, RecipeCategory.MISC, ModItems.EXTRA_INGOT.get(), 0.25f, 200, "extra_ingot");
         oreBlasting(pWriter, EXTRA_SMELTABLES, RecipeCategory.MISC, ModItems.EXTRA_INGOT.get(), 0.25f, 100, "extra_ingot");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXTRA_CHAMBER.get())
+                .pattern("SSS")
+                .pattern("FRF")
+                .pattern("TTT")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('F', Blocks.FURNACE)
+                .define('R', Items.REDSTONE)
+                .define('T', Blocks.STONE)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
 
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXTRA_BLOCK.get())
                 .pattern("SSS")

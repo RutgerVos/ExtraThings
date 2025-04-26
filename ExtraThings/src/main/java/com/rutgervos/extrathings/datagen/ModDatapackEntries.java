@@ -4,6 +4,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import com.rutgervos.extrathings.ExtraThings;
+import com.rutgervos.extrathings.enchantment.ModEnchantments;
 import com.rutgervos.extrathings.trim.ModTrimMaterials;
 import com.rutgervos.extrathings.trim.ModTrimPatterns;
 import com.rutgervos.extrathings.worldgen.ModBiomeModifiers;
@@ -21,6 +22,7 @@ public class ModDatapackEntries extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap)
             .add(Registries.TRIM_PATTERN, ModTrimPatterns::bootstrap)
+            .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
