@@ -70,10 +70,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItemBlockTexture(ModBlocks.BLUE_POPPY);
 
-        // trimmedArmorItem(ModItems.EXTRA_HELMET);
-        // trimmedArmorItem(ModItems.EXTRA_CHESTPLATE);
-        // trimmedArmorItem(ModItems.EXTRA_LEGGINGS);
-        // trimmedArmorItem(ModItems.EXTRA_BOOTS);
+        trimmedArmorItem(ModItems.EXTRA_HELMET);
+        trimmedArmorItem(ModItems.EXTRA_CHESTPLATE);
+        trimmedArmorItem(ModItems.EXTRA_LEGGINGS);
+        trimmedArmorItem(ModItems.EXTRA_BOOTS);
 
         simpleItem(ModItems.EXTRA_HELMET);
         simpleItem(ModItems.EXTRA_CHESTPLATE);
