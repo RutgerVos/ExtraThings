@@ -134,6 +134,44 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.LAVA_BUCKET), has(Items.LAVA_BUCKET))
                 .save(pWriter);
 
+                 ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.EXTRA_HELMET.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("   ")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.EXTRA_CHESTPLATE.get())
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.EXTRA_LEGGINGS.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.EXTRA_BOOTS.get())
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.DECOOL14_SMITHING_TEMPLATE.get(), 2)
+                .requires(ModItems.EXTRA_INGOT.get())
+                .requires(ModItems.DECOOL14_SMITHING_TEMPLATE.get())
+                .unlockedBy(getHasName(ModBlocks.EXTRA_BLOCK.get()), has(ModBlocks.EXTRA_BLOCK.get()))
+                .save(pWriter);
+
                  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.EXTRA_INGOT.get(), 9)
                 .requires(ModBlocks.EXTRA_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.EXTRA_BLOCK.get()), has(ModBlocks.EXTRA_BLOCK.get()))
