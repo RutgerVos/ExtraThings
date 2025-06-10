@@ -21,7 +21,7 @@ public class ModBlockEntities {
                     PedestalBlockEntity::new, ModBlocks.PEDESTAL.get()).build(null));
 
      public static final RegistryObject<BlockEntityType<ExtraChamberBlockEntity>> EXTRA_CHAMBER_BE =
-            BLOCK_ENTITIES.register("growth_chamber_be", () -> BlockEntityType.Builder.of(
+            BLOCK_ENTITIES.register("extra_chamber_be", () -> BlockEntityType.Builder.of(
                 ExtraChamberBlockEntity::new, ModBlocks.EXTRA_CHAMBER.get()).build(null));
 
     public static void register(IEventBus eventBus) {

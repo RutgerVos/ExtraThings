@@ -1,5 +1,5 @@
 {
-    "type": "extrathings:growth_chamber",
+    "type": "extrathings:extra_chamber",
     "ingredient": {
       "item": "minecraft:coal"
     },

@@ -23,7 +23,7 @@ public record ExtraChamberRecipe(Ingredient inputItem, ItemStack output) impleme
         return list;
     }
 
-    // read in JSON File --> turns into new GrowthChamberRecipe
+    // read in JSON File --> turns into new ExtraChamberRecipe
 
     @Override
     public boolean matches(ExtraChamberRecipeInput pInput, Level pLevel) {

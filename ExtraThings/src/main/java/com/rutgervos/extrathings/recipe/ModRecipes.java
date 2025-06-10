@@ -17,7 +17,7 @@ public class ModRecipes {
             DeferredRegister.create(ForgeRegistries.RECIPE_TYPES, ExtraThings.MODID);
 
     public static final RegistryObject<RecipeSerializer<ExtraChamberRecipe>> EXTRA_CHAMBER_SERIALIZER =
-            SERIALIZERS.register("growth_chamber", ExtraChamberRecipe.Serializer::new);
+            SERIALIZERS.register("extra_chamber", ExtraChamberRecipe.Serializer::new);
     public static final RegistryObject<RecipeType<ExtraChamberRecipe>> EXTRA_CHAMBER_TYPE =
             TYPES.register("extra_chamber", () -> new RecipeType<ExtraChamberRecipe>() {
                 @Override
