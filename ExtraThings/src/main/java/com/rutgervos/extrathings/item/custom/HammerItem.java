@@ -7,12 +7,15 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 
 import java.util.List;
+
 
 public class HammerItem extends DiggerItem {
 
@@ -56,5 +59,21 @@ public class HammerItem extends DiggerItem {
 
         return positions;
     }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        // This will allow any enchantment applicable to a pickaxe
+        return enchantment.canEnchant(new ItemStack(net.minecraft.world.item.Items.NETHERITE_PICKAXE));
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public int getEnchantmentValue() {
+    return this.getTier().getEnchantmentValue();
+}
 
 }

@@ -1,5 +1,6 @@
 package com.rutgervos.extrathings.item;
 
+
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.custom.ChiselItem;
@@ -11,6 +12,7 @@ import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 import com.rutgervos.extrathings.item.custom.StaffOfExtra;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
@@ -21,11 +23,15 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = 
@@ -67,9 +73,9 @@ public class ModItems {
             public static final RegistryObject<Item> EXTRA_HORSE_ARMOR = ITEMS.register("extra_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, new Item.Properties().stacksTo(1).fireResistant()));
-         public static final RegistryObject<Item> EXTRA_HAMMER = ITEMS.register("extra_hammer",
+        public static final RegistryObject<Item> EXTRA_HAMMER = ITEMS.register("extra_hammer",
             () -> new HammerItem(ModToolTiers.EXTRA, new Item.Properties().fireResistant()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.EXTRA, 7, -3.5f))));
+                    .attributes(createHammerAttributes(ModToolTiers.EXTRA, 7, -3.5f))));
         public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(100000).fireResistant()));
         public static final RegistryObject<Item> COBBLESTONE_GENERATOR = ITEMS.register("cobblestone_generator",
@@ -77,7 +83,15 @@ public class ModItems {
          public static final RegistryObject<Item> STAFF_OFF_EXTRA = ITEMS.register("staff_off_extra",
          () -> new StaffOfExtra(new Item.Properties().stacksTo(1).fireResistant()));
 
+private static ItemAttributeModifiers createHammerAttributes(Tier pTier, float pAttackDamage, float pAttackSpeed) {
+        ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
+        builder.add(Attributes.ATTACK_DAMAGE, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "hammer_attack_damage"), (double)(pAttackDamage + pTier.getAttackDamageBonus()), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND);
+        builder.add(Attributes.ATTACK_SPEED, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "hammer_attack_speed"), (double)pAttackSpeed, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND);
+        return builder.build();
+    }
+    
 
+         
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
