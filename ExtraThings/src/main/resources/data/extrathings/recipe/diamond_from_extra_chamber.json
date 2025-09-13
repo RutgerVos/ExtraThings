@@ -1,9 +1,0 @@
-{
-    "type": "extrathings:extra_chamber",
-    "ingredient": {
-      "item": "minecraft:coal"
-    },
-    "result": {
-      "id": "minecraft:diamond"
-    }
-  }

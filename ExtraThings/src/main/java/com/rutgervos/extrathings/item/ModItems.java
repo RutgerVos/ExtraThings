@@ -67,7 +67,7 @@ public class ModItems {
                     .attributes(AxeItem.createAttributes(ModToolTiers.EXTRA, 6, -3.2f)).fireResistant()));
     public static final RegistryObject<Item> EXTRA_HOE = ITEMS.register("extra_hoe",
             () -> new HoeItem(ModToolTiers.EXTRA, new Item.Properties()
-                    .attributes(HoeItem.createAttributes(ModToolTiers.EXTRA, 0, -3.0f))));
+                    .attributes(HoeItem.createAttributes(ModToolTiers.EXTRA, 0, -3.0f)).fireResistant()));
     public static final RegistryObject<Item> DECOOL14_SMITHING_TEMPLATE = ITEMS.register("decool14_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "decool14")));
             public static final RegistryObject<Item> EXTRA_HORSE_ARMOR = ITEMS.register("extra_horse_armor",
@@ -79,9 +79,9 @@ public class ModItems {
         public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(100000).fireResistant()));
         public static final RegistryObject<Item> COBBLESTONE_GENERATOR = ITEMS.register("cobblestone_generator",
-         () -> new InventoryCobbleGenerator(new Item.Properties().stacksTo(1)));
+         () -> new InventoryCobbleGenerator(new Item.Properties().stacksTo(1).fireResistant()));
          public static final RegistryObject<Item> STAFF_OFF_EXTRA = ITEMS.register("staff_off_extra",
-         () -> new StaffOfExtra(new Item.Properties().stacksTo(1).fireResistant()));
+         () -> new StaffOfExtra(new Item.Properties().stacksTo(1).fireResistant().durability(20000)));
 
 private static ItemAttributeModifiers createHammerAttributes(Tier pTier, float pAttackDamage, float pAttackSpeed) {
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();

@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/ore_detector_from_extra_shovel",
+  "ingredient": {
+    "item": "extrathings:extra_shovel"
+  },
+  "result": {
+    "count": 1,
+    "id": "extrathings:ore_detector"
+  }
+}

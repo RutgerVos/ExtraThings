@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/experience_bottle_from_bookshelf",
+  "ingredient": {
+    "item": "minecraft:bookshelf"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:experience_bottle"
+  }
+}

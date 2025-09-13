@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/staff_off_extra_from_extra_hoe",
+  "ingredient": {
+    "item": "extrathings:extra_hoe"
+  },
+  "result": {
+    "count": 1,
+    "id": "extrathings:staff_off_extra"
+  }
+}

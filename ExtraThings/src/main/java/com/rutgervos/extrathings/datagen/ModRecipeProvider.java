@@ -193,6 +193,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
                 trimSmithing(pWriter, ModItems.DECOOL14_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "decool14"));
+              new ExtraChamberRecipeBuilder(Items.COAL, Items.DIAMOND)
+    .unlockedBy("has_coal", has(Items.COAL))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/diamond_from_coal"));
+     new ExtraChamberRecipeBuilder(ModItems.EXTRA_SHOVEL.get(), ModItems.ORE_DETECTOR.get())
+    .unlockedBy("has_extra_shovel", has(ModItems.EXTRA_SHOVEL.get()))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/ore_detector_from_extra_shovel"));
+     new ExtraChamberRecipeBuilder(ModItems.EXTRA_HOE.get(), ModItems.STAFF_OFF_EXTRA.get())
+    .unlockedBy("has_extra_hoe", has(ModItems.EXTRA_HOE.get()))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/staff_off_extra_from_extra_hoe"));
+     new ExtraChamberRecipeBuilder(Blocks.BOOKSHELF, Items.EXPERIENCE_BOTTLE)
+    .unlockedBy("has_bookshelf", has(Blocks.BOOKSHELF))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/experience_bottle_from_bookshelf"));
+    
     }
-
 }
