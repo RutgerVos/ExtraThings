@@ -134,6 +134,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.LAVA_BUCKET), has(Items.LAVA_BUCKET))
                 .save(pWriter);
 
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PORTABLE_ENDER_CHEST.get())
+                .pattern("SSS")
+                .pattern("SWS")
+                .pattern("SSS")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('W', Blocks.ENDER_CHEST)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
                  ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.EXTRA_HELMET.get())
                 .pattern("SSS")
                 .pattern("S S")
@@ -193,7 +202,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
                 trimSmithing(pWriter, ModItems.DECOOL14_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "decool14"));
-              new ExtraChamberRecipeBuilder(Items.COAL, Items.DIAMOND)
+     new ExtraChamberRecipeBuilder(Items.COAL, Items.DIAMOND)
     .unlockedBy("has_coal", has(Items.COAL))
     .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/diamond_from_coal"));
      new ExtraChamberRecipeBuilder(ModItems.EXTRA_SHOVEL.get(), ModItems.ORE_DETECTOR.get())
@@ -205,6 +214,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
      new ExtraChamberRecipeBuilder(Blocks.BOOKSHELF, Items.EXPERIENCE_BOTTLE)
     .unlockedBy("has_bookshelf", has(Blocks.BOOKSHELF))
     .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/experience_bottle_from_bookshelf"));
-    
+     new ExtraChamberRecipeBuilder(Blocks.STONE, ModBlocks.PEDESTAL.get())
+    .unlockedBy("has_stone", has(Blocks.STONE))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/pedestal_from_stone"));
     }
 }

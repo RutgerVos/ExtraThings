@@ -9,6 +9,7 @@ import com.rutgervos.extrathings.item.custom.HammerItem;
 import com.rutgervos.extrathings.item.custom.InventoryCobbleGenerator;
 import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
+import com.rutgervos.extrathings.item.custom.PortableEnderChestItem;
 import com.rutgervos.extrathings.item.custom.StaffOfExtra;
 
 import net.minecraft.resources.ResourceLocation;
@@ -82,6 +83,8 @@ public class ModItems {
          () -> new InventoryCobbleGenerator(new Item.Properties().stacksTo(1).fireResistant()));
          public static final RegistryObject<Item> STAFF_OFF_EXTRA = ITEMS.register("staff_off_extra",
          () -> new StaffOfExtra(new Item.Properties().stacksTo(1).fireResistant().durability(20000)));
+         public static final RegistryObject<Item> PORTABLE_ENDER_CHEST = ITEMS.register("portable_ender_chest",
+        () -> new PortableEnderChestItem(new Item.Properties().stacksTo(1)));
 
 private static ItemAttributeModifiers createHammerAttributes(Tier pTier, float pAttackDamage, float pAttackSpeed) {
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "extrathings:extra_ingot"
+    },
+    "W": {
+      "item": "minecraft:ender_chest"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SWS",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "extrathings:portable_ender_chest"
+  }
+}
