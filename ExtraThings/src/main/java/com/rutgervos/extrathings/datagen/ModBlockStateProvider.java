@@ -9,6 +9,7 @@ import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.DoorBlock;
@@ -42,6 +43,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockWithItem(ModBlocks.EXTRA_CHAMBER);
 
         stairsBlock((StairBlock) ModBlocks.EXTRA_STAIRS.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()));
+        stairsBlock((StairBlock) ModBlocks.GOLD_STAIRS.get(), blockTexture(Blocks.GOLD_BLOCK));
+        slabBlock((SlabBlock) ModBlocks.GOLD_SLAB.get(), blockTexture(Blocks.GOLD_BLOCK), blockTexture(Blocks.GOLD_BLOCK));
         slabBlock((SlabBlock) ModBlocks.EXTRA_SLAB.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()), blockTexture(ModBlocks.EXTRA_BLOCK.get()));
 
         buttonBlock((ButtonBlock) ModBlocks.EXTRA_BUTTON.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()));

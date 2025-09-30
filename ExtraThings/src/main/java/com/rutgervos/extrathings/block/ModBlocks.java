@@ -55,6 +55,11 @@ public class ModBlocks {
             public static final RegistryObject<Block> EXTRA_STAIRS = registerBlock("extra_stairs",
             () -> new StairBlock(ModBlocks.EXTRA_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
+            public static final RegistryObject<Block> GOLD_STAIRS = registerBlock("gold_stairs",
+            () -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK)));
+                        public static final RegistryObject<Block> GOLD_SLAB = registerBlock("gold_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK)));
+
             public static final RegistryObject<Block> EXTRA_SLAB = registerBlock("extra_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 

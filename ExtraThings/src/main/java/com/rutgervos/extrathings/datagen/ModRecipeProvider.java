@@ -34,6 +34,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, EXTRA_SMELTABLES, RecipeCategory.MISC, ModItems.EXTRA_INGOT.get(), 0.25f, 200, "extra_ingot");
         oreBlasting(pWriter, EXTRA_SMELTABLES, RecipeCategory.MISC, ModItems.EXTRA_INGOT.get(), 0.25f, 100, "extra_ingot");
+        stonecutterResultFromBase(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXTRA_STAIRS.get(), ModBlocks.EXTRA_BLOCK.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_STAIRS.get(), Blocks.GOLD_BLOCK);
+        stonecutterResultFromBase(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_SLAB.get(), Blocks.GOLD_BLOCK);
+        stonecutterResultFromBase(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXTRA_SLAB.get(), ModBlocks.EXTRA_BLOCK.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXTRA_CHAMBER.get())
                 .pattern("SSS")
@@ -217,5 +221,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
      new ExtraChamberRecipeBuilder(Blocks.STONE, ModBlocks.PEDESTAL.get())
     .unlockedBy("has_stone", has(Blocks.STONE))
     .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/pedestal_from_stone"));
+    new ExtraChamberRecipeBuilder(Blocks.COAL_BLOCK, ModItems.EXTRA_FUEL.get())
+    .unlockedBy("has_coal_block", has(Blocks.COAL_BLOCK))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/extra_fuel_from_coal_block"));
     }
 }

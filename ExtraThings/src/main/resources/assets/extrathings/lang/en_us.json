@@ -43,6 +43,8 @@
 
     "block.extrathings.extra_ore": "Extra ore",
     "block.extrathings.extra_stairs": "Extra stairs",
+    "block.extrathings.gold_stairs": "Gold stairs",
+    "block.extrathings.gold_slab": "Gold slab",
     "block.extrathings.extra_slab": "Extra slab",
     "block.extrathings.extra_button": "Extra Button",
     "block.extrathings.extra_pressure_plate": "Extra pressure plate",
