@@ -2,6 +2,7 @@ package com.rutgervos.extrathings.enchantment;
 
 import com.mojang.serialization.MapCodec;
 import com.rutgervos.extrathings.ExtraThings;
+import com.rutgervos.extrathings.enchantment.custom.LavaWalkerEnchantmentEffect;
 import com.rutgervos.extrathings.enchantment.custom.LightningStrikerEnchantmentEffect;
 
 import net.minecraft.core.registries.Registries;
@@ -16,6 +17,8 @@ public class ModEnchantmentEffects {
 
     public static final RegistryObject<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
             ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker", () -> LightningStrikerEnchantmentEffect.CODEC);
+     public static final RegistryObject<MapCodec<? extends EnchantmentEntityEffect>> LAVA_WALKER =
+            ENTITY_ENCHANTMENT_EFFECTS.register("lava_walker", () -> LavaWalkerEnchantmentEffect.CODEC);
 
 
     public static void register(IEventBus eventBus) {

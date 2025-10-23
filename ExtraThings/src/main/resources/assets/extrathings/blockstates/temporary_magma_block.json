@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "extrathings:block/temporary_magma_block" 
+    }
+  }
+}

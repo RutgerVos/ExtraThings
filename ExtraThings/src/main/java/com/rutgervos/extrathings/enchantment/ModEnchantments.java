@@ -1,6 +1,7 @@
 package com.rutgervos.extrathings.enchantment;
 
 import com.rutgervos.extrathings.ExtraThings;
+import com.rutgervos.extrathings.enchantment.custom.LavaWalkerEnchantmentEffect;
 import com.rutgervos.extrathings.enchantment.custom.LightningStrikerEnchantmentEffect;
 
 import net.minecraft.core.registries.Registries;
@@ -17,6 +18,8 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 public class ModEnchantments {
      public static final ResourceKey<Enchantment> LIGHTNING_STRIKER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "lightning_striker"));
+             public static final ResourceKey<Enchantment> LAVA_WALKER = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "lava_walker"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);
@@ -34,7 +37,22 @@ public class ModEnchantments {
                 .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
                 .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                         EnchantmentTarget.VICTIM, new LightningStrikerEnchantmentEffect()));
-
+        register(context, LAVA_WALKER, Enchantment.enchantment(Enchantment.definition(
+                items.getOrThrow(ItemTags.FOOT_ARMOR_ENCHANTABLE), // Item tag for boots
+                items.getOrThrow(ItemTags.FOOT_ARMOR_ENCHANTABLE),
+                2, // Max Level (like Frost Walker)
+                2, // Rarity (Common)
+                Enchantment.dynamicCost(10, 8), // Minimum cost (10 + level * 8)
+                Enchantment.dynamicCost(30, 8), // Maximum cost (30 + level * 8)
+                2, // Max trade offer
+                EquipmentSlotGroup.FEET)) // Slot for boots
+                
+                // Exclusive with other movement enchantments (like Frost Walker and Depth Strider)
+                .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.BOOTS_EXCLUSIVE))
+                
+                // Apply the LavaWalkerEnchantmentEffect every T_CK (tick)
+                .withEffect(EnchantmentEffectComponents.TICK, 
+                        new LavaWalkerEnchantmentEffect()));
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

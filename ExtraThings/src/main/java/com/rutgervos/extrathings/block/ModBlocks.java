@@ -6,6 +6,7 @@ import com.rutgervos.extrathings.block.custom.ModFlammableRotatedPillarBlock;
 import com.rutgervos.extrathings.block.custom.PedestalBlock;
 import com.rutgervos.extrathings.block.custom.SoundBlock;
 import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
+import com.rutgervos.extrathings.block.custom.TemporaryMagmaBlock;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.worldgen.tree.ModTreeGrowers;
 
@@ -45,6 +46,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
     DeferredRegister.create(ForgeRegistries.BLOCKS, ExtraThings.MODID);
 
+    public static final RegistryObject<Block> TEMPORARY_MAGMA_BLOCK = registerBlock("temporary_magma_block",
+        () -> new TemporaryMagmaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
      public static final RegistryObject<Block> EXTRA_BLOCK = registerBlock("extra_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
             public static final RegistryObject<Block> EXTRA_ORE = registerBlock("extra_ore",
