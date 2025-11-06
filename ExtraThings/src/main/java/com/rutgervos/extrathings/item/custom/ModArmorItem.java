@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -81,5 +82,22 @@ public class ModArmorItem extends ArmorItem {
         ItemStack helmet = player.getInventory().getArmor(3);
 
         return !boots.isEmpty() && !leggings.isEmpty() && !chestplate.isEmpty() && !helmet.isEmpty();
+    }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        if(type.getName() == "boots")
+        {
+            return enchantment.canEnchant(new ItemStack(net.minecraft.world.item.Items.NETHERITE_BOOTS));
+        }
+        if(type.getName() == "chestplate")
+        {
+            return enchantment.canEnchant(new ItemStack(net.minecraft.world.item.Items.NETHERITE_CHESTPLATE));
+        }
+        if(type.getName() == "helmet")
+        {
+            return enchantment.canEnchant(new ItemStack(net.minecraft.world.item.Items.NETHERITE_HELMET));
+        }
+        return enchantment.canEnchant(new ItemStack(net.minecraft.world.item.Items.NETHERITE_LEGGINGS));
     }
 }

@@ -49,13 +49,13 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18000)).fireResistant()));
     public static final RegistryObject<Item> EXTRA_CHESTPLATE = ITEMS.register("extra_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18000)).fireResistant()));
     public static final RegistryObject<Item> EXTRA_LEGGINGS = ITEMS.register("extra_leggings",
-            () -> new ArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            () -> new ModArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18000)).fireResistant()));
     public static final RegistryObject<Item> EXTRA_BOOTS = ITEMS.register("extra_boots",
-            () -> new ArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            () -> new ModArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18000)).fireResistant()));
      public static final RegistryObject<Item> EXTRA_SWORD = ITEMS.register("extra_sword",
             () -> new SwordItem(ModToolTiers.EXTRA, new Item.Properties()
