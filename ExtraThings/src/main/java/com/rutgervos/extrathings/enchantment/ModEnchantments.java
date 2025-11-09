@@ -3,6 +3,7 @@ package com.rutgervos.extrathings.enchantment;
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.enchantment.custom.LavaWalkerEnchantmentEffect;
 import com.rutgervos.extrathings.enchantment.custom.LightningStrikerEnchantmentEffect;
+import com.rutgervos.extrathings.enchantment.custom.WitherSlashEnchantmentEffect;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -20,6 +21,8 @@ public class ModEnchantments {
             ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "lightning_striker"));
              public static final ResourceKey<Enchantment> LAVA_WALKER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "lava_walker"));
+      public static final ResourceKey<Enchantment> WITHER_SLASH = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "wither_slash"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);
@@ -53,6 +56,18 @@ public class ModEnchantments {
                 // Apply the LavaWalkerEnchantmentEffect every T_CK (tick)
                 .withEffect(EnchantmentEffectComponents.TICK, 
                         new LavaWalkerEnchantmentEffect()));
+         register(context, WITHER_SLASH, Enchantment.enchantment(Enchantment.definition(
+                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                5,
+                2,
+                Enchantment.dynamicCost(5, 8),
+                Enchantment.dynamicCost(25, 8),
+                2,
+                EquipmentSlotGroup.MAINHAND))
+                .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
+                .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
+                        EnchantmentTarget.VICTIM, new WitherSlashEnchantmentEffect()));
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

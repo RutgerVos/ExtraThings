@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.enchantment.custom.LavaWalkerEnchantmentEffect;
 import com.rutgervos.extrathings.enchantment.custom.LightningStrikerEnchantmentEffect;
+import com.rutgervos.extrathings.enchantment.custom.WitherSlashEnchantmentEffect;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -19,6 +20,8 @@ public class ModEnchantmentEffects {
             ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker", () -> LightningStrikerEnchantmentEffect.CODEC);
      public static final RegistryObject<MapCodec<? extends EnchantmentEntityEffect>> LAVA_WALKER =
             ENTITY_ENCHANTMENT_EFFECTS.register("lava_walker", () -> LavaWalkerEnchantmentEffect.CODEC);
+    public static final RegistryObject<MapCodec<? extends EnchantmentEntityEffect>> WITHER_SLASH =
+            ENTITY_ENCHANTMENT_EFFECTS.register("wither_slash", () -> WitherSlashEnchantmentEffect.CODEC);
 
 
     public static void register(IEventBus eventBus) {

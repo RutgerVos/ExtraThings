@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
       "extrathings:lightning_striker",
-      "extrathings:lava_walker"
+      "extrathings:lava_walker",
+      "extrathings:wither_slash"
     ]
   }
