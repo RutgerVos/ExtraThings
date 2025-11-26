@@ -74,6 +74,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
                 .save(pWriter);
 
+                 ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOUND_BLOCK.get())
+                .pattern("WWW")
+                .pattern("WBW")
+                .pattern("WWW")
+                .define('B', Blocks.BELL)
+                .define('W', Blocks.WHITE_WOOL)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
+
                 ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRA_PICKAXE.get())
                 .pattern("SSS")
                 .pattern(" W ")
