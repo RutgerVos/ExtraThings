@@ -233,5 +233,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     new ExtraChamberRecipeBuilder(Blocks.COAL_BLOCK, ModItems.EXTRA_FUEL.get())
     .unlockedBy("has_coal_block", has(Blocks.COAL_BLOCK))
     .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/extra_fuel_from_coal_block"));
+    new ExtraChamberRecipeBuilder(Blocks.MAGMA_BLOCK, Items.MAGMA_CREAM)
+    .unlockedBy("has_magma_block", has(Blocks.MAGMA_BLOCK))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/magma_cream_from_magma_block"));
+    new ExtraChamberRecipeBuilder(Items.SALMON, Items.PUFFERFISH)
+    .unlockedBy("has_salmon", has(Items.PUFFERFISH))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/pufferfish_from_salmon"));
+    new ExtraChamberRecipeBuilder(Items.COD, Items.SALMON)
+    .unlockedBy("has_cod", has(Items.COD))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/salmon_from_cod"));
+    new ExtraChamberRecipeBuilder(Items.IRON_BLOCK, Items.ANVIL)
+    .unlockedBy("has_iron_block", has(Items.IRON_BLOCK))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/anvil_from_iron_block"));
+    new ExtraChamberRecipeBuilder(Items.GOLD_INGOT, Items.GOLD_BLOCK)
+    .unlockedBy("has_gold_block", has(Items.GOLD_INGOT))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/gold_block_from_gold_ingot"));
+    new ExtraChamberRecipeBuilder(Items.FEATHER, Items.CHICKEN)
+    .unlockedBy("has_feather", has(Items.FEATHER))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/chicken_from_feather"));
+    new ExtraChamberRecipeBuilder(Items.ROTTEN_FLESH, Items.LEATHER)
+    .unlockedBy("has_rotten_flesh", has(Items.ROTTEN_FLESH))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/leather_from_rotten_flesh"));
+    new ExtraChamberRecipeBuilder(Items.LEATHER, Items.SADDLE)
+    .unlockedBy("has_leather", has(Items.LEATHER))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/saddle_from_leather"));
     }
 }

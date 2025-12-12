@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/salmon_from_cod",
+  "ingredient": {
+    "item": "minecraft:cod"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:salmon"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_salmon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:pufferfish"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrathings:extra_chamber/pufferfish_from_salmon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_salmon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrathings:extra_chamber/pufferfish_from_salmon"
+    ]
+  }
+}

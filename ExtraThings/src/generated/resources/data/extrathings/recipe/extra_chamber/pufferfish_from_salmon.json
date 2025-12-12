@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/pufferfish_from_salmon",
+  "ingredient": {
+    "item": "minecraft:salmon"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:pufferfish"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/anvil_from_iron_block",
+  "ingredient": {
+    "item": "minecraft:iron_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:anvil"
+  }
+}
