@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.block.entity.ModBlockEntities;
 import com.rutgervos.extrathings.block.entity.renderer.PedestalBlockEntityRenderer;
+import com.rutgervos.extrathings.component.ModDataComponents;
 import com.rutgervos.extrathings.effect.ModEffects;
 import com.rutgervos.extrathings.enchantment.ModEnchantmentEffects;
 import com.rutgervos.extrathings.item.ModCreativeModTabs;
@@ -18,7 +19,9 @@ import com.rutgervos.extrathings.villager.ModVillagers;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -95,6 +98,7 @@ public class ExtraThings
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
+        ModDataComponents.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -162,6 +166,12 @@ public class ExtraThings
 
             MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRA_CHAMBER_MENU.get(), ExtraChamberScreen::new);
+            ItemProperties.register(ModItems.POCKET_FURNACE.get(), 
+            ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "active"), 
+            (stack, level, entity, seed) -> 
+            {
+              return stack.getOrDefault(ModDataComponents.IS_ACTIVE.get(), false) ? 1.0F : 0.0F;
+            });
         }
 
         @SubscribeEvent

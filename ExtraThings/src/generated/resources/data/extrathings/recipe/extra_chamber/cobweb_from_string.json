@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/cobweb_from_string",
+  "ingredient": {
+    "item": "minecraft:string"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:cobweb"
+  }
+}

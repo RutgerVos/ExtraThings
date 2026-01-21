@@ -4,6 +4,16 @@
     "item.extrathings.ore_detector": "Ore detector",
 
     "tooltip.extrathings.ore_detector.tooltip": "Currently finds all minecraft ores",
+    "tooltip.extrathings.pocket_furnace.status": "Mode: ",
+    "tooltip.extrathings.pocket_furnace.active": "ON",
+    "tooltip.extrathings.pocket_furnace.inactive": "OFF",
+    "tooltip.extrathings.pocket_furnace.fuel": "Fuel: %s units",
+    "tooltip.extrathings.pocket_furnace.instruction": "Shift + Right Click to Toggle",
+    "tooltip.extrathings.pocket_furnace.tooltip": "Uses extra fuel to smelt inventory items that can be smelted(auto)",
+    "item.extrathings.heart_container": "Extra Heart Container",
+    "tooltip.extrathings.heart_container.desc": "Permanently increases Max Health by 1 heart.(Player can gain 10 extra hearts max.)",
+    "message.extrathings.heart_used": "Your maximum health has increased!",
+    "message.extrathings.heart_limit": "You have reached the maximum health limit!",
 
     "item.extrathings.butter": "Butter",
 
@@ -38,6 +48,8 @@
     "item.extrathings.cobblestone_generator": "Cobble gen inventory",
     "item.extrathings.staff_off_extra": "Staff off extra",
     "item.extrathings.portable_ender_chest": "portable enderchest",
+    "item.extrathings.recall_stone": "Recall Stone",
+    "item.extrathings.pocket_furnace": "Pocket Furnace",
 
     "block.extrathings.extra_block": "Block of Extra ingots",
 

@@ -3,13 +3,17 @@ package com.rutgervos.extrathings.item;
 
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
+import com.rutgervos.extrathings.component.ModDataComponents;
 import com.rutgervos.extrathings.item.custom.ChiselItem;
 import com.rutgervos.extrathings.item.custom.FuelItem;
 import com.rutgervos.extrathings.item.custom.HammerItem;
+import com.rutgervos.extrathings.item.custom.HeartContainerItem;
 import com.rutgervos.extrathings.item.custom.InventoryCobbleGenerator;
 import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
+import com.rutgervos.extrathings.item.custom.PocketFurnaceItem;
 import com.rutgervos.extrathings.item.custom.PortableEnderChestItem;
+import com.rutgervos.extrathings.item.custom.RecallStoneItem;
 import com.rutgervos.extrathings.item.custom.StaffOfExtra;
 
 import net.minecraft.resources.ResourceLocation;
@@ -114,6 +118,15 @@ public class ModItems {
          () -> new StaffOfExtra(new Item.Properties().stacksTo(1).fireResistant().durability(20000)));
          public static final RegistryObject<Item> PORTABLE_ENDER_CHEST = ITEMS.register("portable_ender_chest",
         () -> new PortableEnderChestItem(new Item.Properties().stacksTo(1)));
+        public static final RegistryObject<Item> RECALL_STONE = ITEMS.register("recall_stone",
+    () -> new RecallStoneItem(new Item.Properties().stacksTo(1).durability(16)));
+    public static final RegistryObject<Item> POCKET_FURNACE = ITEMS.register("pocket_furnace",
+        () -> new PocketFurnaceItem(new Item.Properties()
+                .component(ModDataComponents.IS_ACTIVE.get(), false) // Starts OFF
+                .component(ModDataComponents.FUEL_LEVEL.get(), 0)    // Starts with 0 Fuel
+        ));
+    public static final RegistryObject<Item> HEART_CONTAINER = ITEMS.register("heart_container",
+            () -> new HeartContainerItem(new Item.Properties().stacksTo(16)));
 
 private static ItemAttributeModifiers createHammerAttributes(Tier pTier, float pAttackDamage, float pAttackSpeed) {
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();

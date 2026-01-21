@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extrathings:item/pocket_furnace"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "extrathings:active": 1
+      },
+      "model": "extrathings:item/pocket_furnace_on"
+    }
+  ]
+}

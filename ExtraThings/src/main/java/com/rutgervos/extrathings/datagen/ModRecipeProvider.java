@@ -257,5 +257,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     new ExtraChamberRecipeBuilder(Items.LEATHER, Items.SADDLE)
     .unlockedBy("has_leather", has(Items.LEATHER))
     .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/saddle_from_leather"));
+    new ExtraChamberRecipeBuilder(Items.ECHO_SHARD, ModItems.RECALL_STONE.get())
+    .unlockedBy("has_echo_shard", has(Items.ECHO_SHARD))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/recall_stone_from_echo_shard"));
+     new ExtraChamberRecipeBuilder(Blocks.FURNACE, ModItems.POCKET_FURNACE.get())
+    .unlockedBy("has_furnace", has(Blocks.FURNACE))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/pocket_furnace_from_furnace"));
+    new ExtraChamberRecipeBuilder(Items.STRING, Blocks.COBWEB)
+    .unlockedBy("has_string", has(Items.STRING))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/cobweb_from_string"));
+    new ExtraChamberRecipeBuilder(Items.ENCHANTED_GOLDEN_APPLE, ModItems.HEART_CONTAINER.get())
+    .unlockedBy("has_egapple", has(Items.ENCHANTED_GOLDEN_APPLE))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/heart_container_from_apple"));
     }
 }

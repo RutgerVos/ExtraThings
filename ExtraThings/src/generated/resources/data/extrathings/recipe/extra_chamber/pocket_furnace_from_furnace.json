@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/pocket_furnace_from_furnace",
+  "ingredient": {
+    "item": "minecraft:furnace"
+  },
+  "result": {
+    "count": 1,
+    "id": "extrathings:pocket_furnace"
+  }
+}

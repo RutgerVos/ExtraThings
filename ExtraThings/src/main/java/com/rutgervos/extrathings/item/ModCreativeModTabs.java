@@ -67,6 +67,9 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.COBBLESTONE_GENERATOR.get());
         pOutput.accept(ModItems.STAFF_OFF_EXTRA.get());
         pOutput.accept(ModItems.PORTABLE_ENDER_CHEST.get());
+        pOutput.accept(ModItems.RECALL_STONE.get());
+        pOutput.accept(ModItems.POCKET_FURNACE.get());
+        pOutput.accept(ModItems.HEART_CONTAINER.get());
         })
     .build());
 

@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/recall_stone_from_echo_shard",
+  "ingredient": {
+    "item": "minecraft:echo_shard"
+  },
+  "result": {
+    "count": 1,
+    "id": "extrathings:recall_stone"
+  }
+}
