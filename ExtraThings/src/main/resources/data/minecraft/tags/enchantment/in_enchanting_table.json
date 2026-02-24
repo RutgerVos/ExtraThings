@@ -3,6 +3,7 @@
     "values": [
       "extrathings:lightning_striker",
       "extrathings:lava_walker",
-      "extrathings:wither_slash"
+      "extrathings:wither_slash",
+      "extrathings:poison_touch"
     ]
   }
