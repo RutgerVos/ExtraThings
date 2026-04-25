@@ -70,6 +70,10 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.RECALL_STONE.get());
         pOutput.accept(ModItems.POCKET_FURNACE.get());
         pOutput.accept(ModItems.HEART_CONTAINER.get());
+        pOutput.accept(ModItems.TURTLE_HELMET_IMPROVED.get());
+        pOutput.accept(ModItems.TURTLE_CHESTPLATE.get());
+        pOutput.accept(ModItems.TURTLE_LEGGINGS.get());
+        pOutput.accept(ModItems.TURTLE_BOOTS.get());
         })
     .build());
 

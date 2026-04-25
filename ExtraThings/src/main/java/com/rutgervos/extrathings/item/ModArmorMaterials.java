@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.EnumMap;
@@ -28,6 +29,14 @@ public class ModArmorMaterials {
         attribute.put(ArmorItem.Type.HELMET, 5);
         attribute.put(ArmorItem.Type.BODY, 11);
     }), 5, 4f, 0.1f, () -> ModItems.EXTRA_INGOT.get());
+    public static final Holder<ArmorMaterial> TURTLE_ARMOR_MATERIAL = register("turtle", Util.make(new EnumMap<>(ArmorItem.Type.class),
+    attribute -> {
+        attribute.put(ArmorItem.Type.BOOTS, 3);
+        attribute.put(ArmorItem.Type.LEGGINGS, 6);
+        attribute.put(ArmorItem.Type.CHESTPLATE, 9);
+        attribute.put(ArmorItem.Type.HELMET, 5);
+        attribute.put(ArmorItem.Type.BODY, 11);
+    }), 5, 4f, 0.1f, () -> Items.TURTLE_SCUTE);
 
 private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                           int enchantability, float toughness, float knockbackResistance,

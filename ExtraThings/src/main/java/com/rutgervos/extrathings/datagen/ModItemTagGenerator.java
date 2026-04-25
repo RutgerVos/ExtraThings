@@ -40,7 +40,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.EXTRA_HELMET.get())
                 .add(ModItems.EXTRA_CHESTPLATE.get())
                 .add(ModItems.EXTRA_LEGGINGS.get())
-                .add(ModItems.EXTRA_BOOTS.get()); 
+                .add(ModItems.EXTRA_BOOTS.get())
+                .add(ModItems.TURTLE_HELMET_IMPROVED.get())
+                .add(ModItems.TURTLE_CHESTPLATE.get())
+                .add(ModItems.TURTLE_LEGGINGS.get())
+                .add(ModItems.TURTLE_BOOTS.get()); 
                 
                 this.tag(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.EXTRA_INGOT.get());

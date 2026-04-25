@@ -50,6 +50,10 @@
     "item.extrathings.portable_ender_chest": "portable enderchest",
     "item.extrathings.recall_stone": "Recall Stone",
     "item.extrathings.pocket_furnace": "Pocket Furnace",
+    "item.extrathings.turtle_helmet_improved": "Turtle Helmet Improved",
+    "item.extrathings.turtle_chestplate": "Turtle Chestplate",
+    "item.extrathings.turtle_leggings": "Turtle Leggings",
+    "item.extrathings.turtle_boots": "Turtle Boots",
 
     "block.extrathings.extra_block": "Block of Extra ingots",
 

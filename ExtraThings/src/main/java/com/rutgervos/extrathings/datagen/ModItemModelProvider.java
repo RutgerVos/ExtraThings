@@ -79,11 +79,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.EXTRA_CHESTPLATE);
         trimmedArmorItem(ModItems.EXTRA_LEGGINGS);
         trimmedArmorItem(ModItems.EXTRA_BOOTS);
+        trimmedArmorItem(ModItems.TURTLE_HELMET_IMPROVED);
+        trimmedArmorItem(ModItems.TURTLE_CHESTPLATE);
+        trimmedArmorItem(ModItems.TURTLE_LEGGINGS);
+        trimmedArmorItem(ModItems.TURTLE_BOOTS);
 
         simpleItem(ModItems.EXTRA_HELMET);
         simpleItem(ModItems.EXTRA_CHESTPLATE);
         simpleItem(ModItems.EXTRA_LEGGINGS);
         simpleItem(ModItems.EXTRA_BOOTS);
+        simpleItem(ModItems.TURTLE_HELMET_IMPROVED);
+        simpleItem(ModItems.TURTLE_CHESTPLATE);
+        simpleItem(ModItems.TURTLE_LEGGINGS);
+        simpleItem(ModItems.TURTLE_BOOTS);
 
         handheldItem(ModItems.EXTRA_AXE);
         handheldItem(ModItems.EXTRA_SHOVEL);

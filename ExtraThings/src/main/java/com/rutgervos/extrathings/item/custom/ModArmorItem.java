@@ -24,6 +24,10 @@ public class ModArmorItem extends ArmorItem {
                             new MobEffectInstance(MobEffects.GLOWING, 200, 1, false, false),
                             new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 3, false, false),
                             new MobEffectInstance(MobEffects.HEALTH_BOOST, 200, 1, false, false)))
+                    .put(ModArmorMaterials.TURTLE_ARMOR_MATERIAL,
+                            List.of(new MobEffectInstance(MobEffects.DIG_SPEED, 200, 4, false, false),
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 2, false, false),
+                            new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 4, false, false)))
                     .build();
 
     public ModArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {

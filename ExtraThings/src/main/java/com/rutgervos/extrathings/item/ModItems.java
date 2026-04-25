@@ -68,6 +68,18 @@ public class ModItems {
     public static final RegistryObject<Item> EXTRA_BOOTS = ITEMS.register("extra_boots",
             () -> new ModArmorItem(ModArmorMaterials.EXTRA_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18000)).fireResistant()));
+    public static final RegistryObject<Item> TURTLE_CHESTPLATE = ITEMS.register("turtle_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.TURTLE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18000)).fireResistant()));
+    public static final RegistryObject<Item> TURTLE_LEGGINGS = ITEMS.register("turtle_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.TURTLE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18000)).fireResistant()));
+    public static final RegistryObject<Item> TURTLE_BOOTS = ITEMS.register("turtle_boots",
+            () -> new ModArmorItem(ModArmorMaterials.TURTLE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18000)).fireResistant()));
+    public static final RegistryObject<Item> TURTLE_HELMET_IMPROVED = ITEMS.register("turtle_helmet_improved",
+            () -> new ModArmorItem(ModArmorMaterials.TURTLE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18000)).fireResistant()));
     public static final RegistryObject<Item> EXTRA_SWORD = ITEMS.register("extra_sword",
              () -> new SwordItem(
                  ModToolTiers.EXTRA,new Item.Properties().fireResistant().attributes(SwordItem.createAttributes(ModToolTiers.EXTRA, 3, -2.4f))

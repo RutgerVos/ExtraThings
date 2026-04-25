@@ -269,5 +269,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     new ExtraChamberRecipeBuilder(Items.ENCHANTED_GOLDEN_APPLE, ModItems.HEART_CONTAINER.get())
     .unlockedBy("has_egapple", has(Items.ENCHANTED_GOLDEN_APPLE))
     .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/heart_container_from_apple"));
+    new ExtraChamberRecipeBuilder(ModItems.TURTLE_BOOTS.get(), ModItems.TURTLE_CHESTPLATE.get())
+    .unlockedBy("has_turtle_boots", has(ModItems.TURTLE_BOOTS.get()))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/turtle_chestplate_from_turtle_boots"));
+    new ExtraChamberRecipeBuilder(ModItems.TURTLE_CHESTPLATE.get(), ModItems.TURTLE_LEGGINGS.get())
+    .unlockedBy("has_turtle_chestplate", has(ModItems.TURTLE_CHESTPLATE.get()))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/turtle_leggings_from_turtle_chestplate"));
+     new ExtraChamberRecipeBuilder(Items.TURTLE_SCUTE, ModItems.TURTLE_BOOTS.get())
+    .unlockedBy("has_turtle_scute", has(Items.TURTLE_SCUTE))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/turtle_boots_from_turtle_scute"));
+    new ExtraChamberRecipeBuilder(Items.TURTLE_HELMET, ModItems.TURTLE_HELMET_IMPROVED.get())
+    .unlockedBy("has_turtle_helmet", has(Items.TURTLE_HELMET))
+    .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/turtle_helmet_improved_from_turtle_helmet"));
     }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/turtle_boots_from_turtle_scute",
+  "ingredient": {
+    "item": "minecraft:turtle_scute"
+  },
+  "result": {
+    "count": 1,
+    "id": "extrathings:turtle_boots"
+  }
+}

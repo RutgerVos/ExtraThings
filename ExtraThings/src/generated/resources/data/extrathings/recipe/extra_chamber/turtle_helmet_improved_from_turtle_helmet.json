@@ -1,0 +1,11 @@
+{
+  "type": "extrathings:extra_chamber",
+  "id": "extrathings:extra_chamber/turtle_helmet_improved_from_turtle_helmet",
+  "ingredient": {
+    "item": "minecraft:turtle_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "extrathings:turtle_helmet_improved"
+  }
+}

@@ -3,6 +3,10 @@
     "extrathings:extra_helmet",
     "extrathings:extra_chestplate",
     "extrathings:extra_leggings",
-    "extrathings:extra_boots"
+    "extrathings:extra_boots",
+    "extrathings:turtle_helmet_improved",
+    "extrathings:turtle_chestplate",
+    "extrathings:turtle_leggings",
+    "extrathings:turtle_boots"
   ]
 }
