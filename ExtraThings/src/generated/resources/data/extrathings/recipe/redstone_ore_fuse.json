@@ -1,0 +1,15 @@
+{
+  "type": "extrathings:extra_fuse",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:redstone_ore"
+  }
+}

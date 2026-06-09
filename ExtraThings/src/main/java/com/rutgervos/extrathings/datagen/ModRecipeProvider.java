@@ -49,6 +49,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', Blocks.STONE)
                 .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
                 .save(pWriter);
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXTRA_FUSE_BLOCK.get())
+                .pattern("SSS")
+                .pattern("FRF")
+                .pattern("TTT")
+                .define('S', ModItems.EXTRA_INGOT.get())
+                .define('F', Blocks.FURNACE)
+                .define('R', ModBlocks.EXTRA_CHAMBER.get())
+                .define('T', Items.DIAMOND)
+                .unlockedBy(getHasName(ModItems.EXTRA_INGOT.get()), has(ModItems.EXTRA_INGOT.get()))
+                .save(pWriter);
 
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXTRA_BLOCK.get())
                 .pattern("SSS")
@@ -281,5 +291,73 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     new ExtraChamberRecipeBuilder(Items.TURTLE_HELMET, ModItems.TURTLE_HELMET_IMPROVED.get())
     .unlockedBy("has_turtle_helmet", has(Items.TURTLE_HELMET))
     .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "extra_chamber/turtle_helmet_improved_from_turtle_helmet"));
+
+    ExtraFuseRecipeBuilder.fuseRecipe(Blocks.TNT, 1)
+            .requires(Items.IRON_INGOT)
+            .requires(Items.GUNPOWDER)
+            .requires(Items.STRING)
+            .unlockedBy("has_gunpowder", has(Items.GUNPOWDER))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "tnt_from_fuse"));
+    ExtraFuseRecipeBuilder.fuseRecipe(Items.NETHERITE_SCRAP, 1)
+            .requires(Items.FLINT)
+            .requires(Items.GOLD_INGOT)
+            .requires(Blocks.OBSIDIAN)
+            .unlockedBy("has_obsidian", has(Blocks.OBSIDIAN))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "netherite_scrap_from_fuse"));
+    ExtraFuseRecipeBuilder.fuseRecipe(Blocks.SKELETON_SKULL, 1)
+            .requires(Items.BONE)
+            .requires(Blocks.BONE_BLOCK)
+            .requires(Items.BONE)
+            .unlockedBy("has_bone_block", has(Blocks.BONE_BLOCK))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "skeleton_skull_from_fuse"));
+    ExtraFuseRecipeBuilder.fuseRecipe(Blocks.ZOMBIE_HEAD, 1)
+            .requires(Items.ROTTEN_FLESH)
+            .requires(Blocks.SKELETON_SKULL)
+            .requires(Items.ROTTEN_FLESH)
+            .unlockedBy("has_rotten_flesh", has(Items.ROTTEN_FLESH))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "zombie_head_from_fuse"));
+    ExtraFuseRecipeBuilder.fuseRecipe(Blocks.CREEPER_HEAD, 1)
+            .requires(Items.GUNPOWDER)
+            .requires(Blocks.SKELETON_SKULL)
+            .requires(Items.GUNPOWDER)
+            .unlockedBy("has_gunpowder", has(Items.GUNPOWDER))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "creeper_head_from_fuse"));
+
+    //A recipe that only uses 2 inputs instead of all 3
+    ExtraFuseRecipeBuilder.fuseRecipe(Items.BLAZE_POWDER, 2)
+            .requires(Items.FLINT_AND_STEEL)
+            .requires(Items.COAL)
+            .unlockedBy("has_coal", has(Items.COAL))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "blaze_powder_fuse"));
+    ExtraFuseRecipeBuilder.fuseRecipe(Blocks.WITHER_SKELETON_SKULL, 1)
+            .requires(Blocks.SKELETON_SKULL)
+            .requires(Blocks.COAL_BLOCK)
+            .unlockedBy("has_coal_block", has(Blocks.COAL_BLOCK))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "wither_skeleton_skull_fuse"));
+   ExtraFuseRecipeBuilder.fuseRecipe(Blocks.IRON_ORE, 2)
+            .requires(Items.IRON_INGOT)
+            .requires(Blocks.STONE)
+            .unlockedBy("has_stone", has(Blocks.STONE))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "iron_ore_fuse"));
+   ExtraFuseRecipeBuilder.fuseRecipe(Blocks.GOLD_ORE, 2)
+            .requires(Items.GOLD_INGOT)
+            .requires(Blocks.STONE)
+            .unlockedBy("has_stone", has(Blocks.STONE))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "gold_ore_fuse"));
+   ExtraFuseRecipeBuilder.fuseRecipe(Blocks.COPPER_ORE, 2)
+            .requires(Items.COPPER_INGOT)
+            .requires(Blocks.STONE)
+            .unlockedBy("has_stone", has(Blocks.STONE))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "copper_ore_fuse"));
+   ExtraFuseRecipeBuilder.fuseRecipe(Blocks.REDSTONE_ORE, 2)
+            .requires(Items.REDSTONE)
+            .requires(Blocks.STONE)
+            .unlockedBy("has_stone", has(Blocks.STONE))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "redstone_ore_fuse"));
+   ExtraFuseRecipeBuilder.fuseRecipe(Blocks.EMERALD_ORE, 2)
+            .requires(Items.EMERALD)
+            .requires(Blocks.STONE)
+            .unlockedBy("has_stone", has(Blocks.STONE))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "emerald_ore_fuse"));
     }
 }

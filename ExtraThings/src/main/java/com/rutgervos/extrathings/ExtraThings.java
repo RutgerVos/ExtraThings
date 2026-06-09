@@ -14,6 +14,7 @@ import com.rutgervos.extrathings.potion.ModPotions;
 import com.rutgervos.extrathings.recipe.ModRecipes;
 import com.rutgervos.extrathings.screen.ModMenuTypes;
 import com.rutgervos.extrathings.screen.custom.ExtraChamberScreen;
+import com.rutgervos.extrathings.screen.custom.ExtraFuseBlockScreen;
 import com.rutgervos.extrathings.screen.custom.PedestalScreen;
 import com.rutgervos.extrathings.villager.ModVillagers;
 
@@ -166,6 +167,7 @@ public class ExtraThings
 
             MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRA_CHAMBER_MENU.get(), ExtraChamberScreen::new);
+            MenuScreens.register(ModMenuTypes.EXTRA_FUSE_BLOCK_MENU.get(), ExtraFuseBlockScreen::new);
             ItemProperties.register(ModItems.POCKET_FURNACE.get(), 
             ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "active"), 
             (stack, level, entity, seed) -> 

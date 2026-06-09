@@ -2,6 +2,7 @@ package com.rutgervos.extrathings.block;
 
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.custom.ExtraChamberBlock;
+import com.rutgervos.extrathings.block.custom.ExtraFuseBlock;
 import com.rutgervos.extrathings.block.custom.ModFlammableRotatedPillarBlock;
 import com.rutgervos.extrathings.block.custom.PedestalBlock;
 import com.rutgervos.extrathings.block.custom.SoundBlock;
@@ -149,6 +150,8 @@ public class ModBlocks {
             () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
             public static final RegistryObject<Block> EXTRA_CHAMBER = registerBlock("extra_chamber",
             () -> new ExtraChamberBlock(BlockBehaviour.Properties.of().noOcclusion()));
+            public static final RegistryObject<Block> EXTRA_FUSE_BLOCK = registerBlock("extra_fuse_block",
+            () -> new ExtraFuseBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

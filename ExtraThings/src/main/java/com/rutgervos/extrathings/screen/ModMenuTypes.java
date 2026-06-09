@@ -2,6 +2,7 @@ package com.rutgervos.extrathings.screen;
 
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.screen.custom.ExtraChamberMenu;
+import com.rutgervos.extrathings.screen.custom.ExtraFuseBlockMenu;
 import com.rutgervos.extrathings.screen.custom.PedestalMenu;
 
 import net.minecraft.core.registries.Registries;
@@ -21,6 +22,8 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<ExtraChamberMenu>> EXTRA_CHAMBER_MENU =
             MENUS.register("extra_chamber_menu", () -> IForgeMenuType.create(ExtraChamberMenu::new));
+
+    public static final RegistryObject<MenuType<ExtraFuseBlockMenu>> EXTRA_FUSE_BLOCK_MENU = MENUS.register("extra_fuse_block_menu", () -> IForgeMenuType.create(ExtraFuseBlockMenu::new));
 
 
 

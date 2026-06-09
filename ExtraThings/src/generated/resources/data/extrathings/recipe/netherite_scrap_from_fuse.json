@@ -1,0 +1,18 @@
+{
+  "type": "extrathings:extra_fuse",
+  "ingredients": [
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:obsidian"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:netherite_scrap"
+  }
+}

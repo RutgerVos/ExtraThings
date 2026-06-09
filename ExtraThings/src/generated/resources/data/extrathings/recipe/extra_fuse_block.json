@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "R": {
+      "item": "extrathings:extra_chamber"
+    },
+    "S": {
+      "item": "extrathings:extra_ingot"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "FRF",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "extrathings:extra_fuse_block"
+  }
+}

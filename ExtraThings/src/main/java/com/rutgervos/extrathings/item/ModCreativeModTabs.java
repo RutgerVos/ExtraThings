@@ -49,6 +49,7 @@ public class ModCreativeModTabs {
         pOutput.accept(ModBlocks.EXTRA_SAPLING.get());
         pOutput.accept(ModBlocks.PEDESTAL.get());
         pOutput.accept(ModBlocks.EXTRA_CHAMBER.get());
+        pOutput.accept(ModBlocks.EXTRA_FUSE_BLOCK.get());
         pOutput.accept(ModBlocks.GOLD_STAIRS.get());
         pOutput.accept(ModBlocks.GOLD_SLAB.get());
 

@@ -3,6 +3,7 @@ package com.rutgervos.extrathings.block.entity;
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.block.entity.custom.ExtraChamberBlockEntity;
+import com.rutgervos.extrathings.block.entity.custom.ExtraFuseBlockEntity;
 import com.rutgervos.extrathings.block.entity.custom.PedestalBlockEntity;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -31,6 +32,10 @@ public class ModBlockEntities {
                 // Corrected lambda expression with explicit generic type
                 (BlockPos pos, BlockState state) -> new ExtraChamberBlockEntity(pos, state),
                 ModBlocks.EXTRA_CHAMBER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<ExtraFuseBlockEntity>> EXTRA_FUSE_BLOCK_BE =  BLOCK_ENTITIES.register("extra_fuse_block_be", () -> BlockEntityType.Builder.<ExtraFuseBlockEntity>of(
+                // Corrected lambda expression with explicit generic type
+                (BlockPos pos, BlockState state) -> new ExtraFuseBlockEntity(pos, state),
+                ModBlocks.EXTRA_FUSE_BLOCK.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

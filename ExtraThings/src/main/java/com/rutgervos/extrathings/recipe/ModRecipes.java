@@ -25,6 +25,17 @@ public class ModRecipes {
                     return "extra_chamber";
                 }
             });
+    public static final RegistryObject<RecipeSerializer<ExtraFuseRecipe>> EXTRA_FUSE_BLOCK_SERIALIZER =
+            SERIALIZERS.register("extra_fuse", ExtraFuseRecipe.Serializer::new);
+
+
+    public static final RegistryObject<RecipeType<ExtraFuseRecipe>> EXTRA_FUSE_BLOCK_TYPE =
+            TYPES.register("extra_fuse", () -> new RecipeType<ExtraFuseRecipe>() {
+                @Override
+                public String toString() {
+                    return "extra_fuse";
+                }
+            });
 
 
     public static void register(IEventBus eventBus) {

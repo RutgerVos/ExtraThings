@@ -5,8 +5,10 @@ import java.util.List;
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.recipe.ExtraChamberRecipe;
+import com.rutgervos.extrathings.recipe.ExtraFuseRecipe;
 import com.rutgervos.extrathings.recipe.ModRecipes;
 import com.rutgervos.extrathings.screen.custom.ExtraChamberScreen;
+import com.rutgervos.extrathings.screen.custom.ExtraFuseBlockScreen;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -33,6 +35,8 @@ public class JEIExtraThingsModPlugin implements IModPlugin {
         IModPlugin.super.registerCategories(registration);
         registration.addRecipeCategories(new ExtraChamberRecipeCategory(
             registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new ExtraFuseRecipeCategory(
+            registration.getJeiHelpers().getGuiHelper()));
     }
 
      @Override
@@ -42,6 +46,9 @@ public class JEIExtraThingsModPlugin implements IModPlugin {
         List<ExtraChamberRecipe> extraChamberRecipes = recipeManager
                 .getAllRecipesFor(ModRecipes.EXTRA_CHAMBER_TYPE.get()).stream().map(RecipeHolder::value).toList();
         registration.addRecipes(ExtraChamberRecipeCategory.EXTRA_CHAMBER_RECIPE_RECIPE_TYPE, extraChamberRecipes);
+        List<ExtraFuseRecipe> extraFuseRecipes = recipeManager
+                .getAllRecipesFor(ModRecipes.EXTRA_FUSE_BLOCK_TYPE.get()).stream().map(RecipeHolder::value).toList();
+        registration.addRecipes(ExtraFuseRecipeCategory.EXTRA_FUSE_RECIPE_RECIPE_TYPE, extraFuseRecipes);
     }
 
     @Override
@@ -49,11 +56,15 @@ public class JEIExtraThingsModPlugin implements IModPlugin {
         IModPlugin.super.registerGuiHandlers(registration);
         registration.addRecipeClickArea(ExtraChamberScreen.class, 70, 30, 25, 20,
         ExtraChamberRecipeCategory.EXTRA_CHAMBER_RECIPE_RECIPE_TYPE);
+         registration.addRecipeClickArea(ExtraFuseBlockScreen.class, 70, 30, 25, 20,
+        ExtraFuseRecipeCategory.EXTRA_FUSE_RECIPE_RECIPE_TYPE);
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.EXTRA_CHAMBER.get().asItem()),
         ExtraChamberRecipeCategory.EXTRA_CHAMBER_RECIPE_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.EXTRA_FUSE_BLOCK.get().asItem()),
+        ExtraFuseRecipeCategory.EXTRA_FUSE_RECIPE_RECIPE_TYPE);
     }
 }
