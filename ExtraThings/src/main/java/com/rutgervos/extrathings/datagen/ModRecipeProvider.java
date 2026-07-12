@@ -322,6 +322,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .requires(Items.GUNPOWDER)
             .unlockedBy("has_gunpowder", has(Items.GUNPOWDER))
             .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "creeper_head_from_fuse"));
+   ExtraFuseRecipeBuilder.fuseRecipe(ModItems.CORROSIVE_POWDER.get(), 2)
+            .requires(Items.ROTTEN_FLESH)
+            .requires(Items.BONE_MEAL)
+            .requires(Items.SPIDER_EYE)
+            .unlockedBy("has_corrosive_powder", has(ModItems.CORROSIVE_POWDER.get()))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "corrosive_powder_from_fuse"));
 
     //A recipe that only uses 2 inputs instead of all 3
     ExtraFuseRecipeBuilder.fuseRecipe(Items.BLAZE_POWDER, 2)

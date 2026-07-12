@@ -75,6 +75,7 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.TURTLE_CHESTPLATE.get());
         pOutput.accept(ModItems.TURTLE_LEGGINGS.get());
         pOutput.accept(ModItems.TURTLE_BOOTS.get());
+        pOutput.accept(ModItems.CORROSIVE_POWDER.get());
         })
     .build());
 

@@ -1,0 +1,18 @@
+{
+  "type": "extrathings:extra_fuse",
+  "ingredients": [
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "minecraft:spider_eye"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "extrathings:corrosive_powder"
+  }
+}

@@ -54,6 +54,8 @@
     "item.extrathings.turtle_chestplate": "Turtle Chestplate",
     "item.extrathings.turtle_leggings": "Turtle Leggings",
     "item.extrathings.turtle_boots": "Turtle Boots",
+    "item.extrathings.corrosive_powder": "Corrosive Powder",
+    "tooltip.extrathings.corrosive_powder.desc": "This powder works strange",
 
     "block.extrathings.extra_block": "Block of Extra ingots",
 
