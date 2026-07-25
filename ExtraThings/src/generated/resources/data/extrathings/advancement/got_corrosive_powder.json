@@ -1,0 +1,29 @@
+{
+  "parent": "extrathings:root",
+  "criteria": {
+    "has_corrosive_powder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extrathings:corrosive_powder"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Obtain Corrosive Powder from fusing materials",
+    "icon": {
+      "count": 1,
+      "id": "extrathings:corrosive_powder"
+    },
+    "title": "Strange Stuff?"
+  },
+  "requirements": [
+    [
+      "has_corrosive_powder"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

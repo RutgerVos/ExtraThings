@@ -90,6 +90,7 @@ public class ModEvents {
 
         builder.addMix(Potions.AWKWARD, Items.WITHER_SKELETON_SKULL, ModPotions.WITHER_POTION.getHolder().get());
         builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.getHolder().get());
+        builder.addMix(Potions.AWKWARD, Items.EMERALD, ModPotions.HERO_OF_THE_VILLAGE_POTION.getHolder().get());
     }
 
      @SubscribeEvent

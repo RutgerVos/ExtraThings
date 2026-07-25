@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "has_fuse_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extrathings:extra_fuse_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": "Start extra Fusion",
+    "icon": {
+      "count": 1,
+      "id": "extrathings:extra_fuse_block"
+    },
+    "title": "Extra Fuse"
+  },
+  "requirements": [
+    [
+      "has_fuse_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

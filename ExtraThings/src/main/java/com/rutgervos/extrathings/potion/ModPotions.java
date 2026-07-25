@@ -18,6 +18,8 @@ public class ModPotions {
 
              public static final RegistryObject<Potion> WITHER_POTION = POTIONS.register("wither_potion",
             () -> new Potion(new MobEffectInstance(MobEffects.WITHER, 400, 0)));
+            public static final RegistryObject<Potion> HERO_OF_THE_VILLAGE_POTION = POTIONS.register("hero_of_the_village_potion",
+            () -> new Potion(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 800, 0)));
 
              public static final RegistryObject<Potion> SLIMEY_POTION = POTIONS.register("slimey_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT.getHolder().get(), 200, 0)));
