@@ -1,10 +1,11 @@
 {
+  "parent": "extrathings:root",
   "criteria": {
-    "has_extra_ingot": {
+    "has_fuse_block": {
       "conditions": {
         "items": [
           {
-            "items": "extrathings:extra_ingot"
+            "items": "extrathings:extra_fuse_block"
           }
         ]
       },
@@ -13,16 +14,16 @@
   },
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "description": "Starting EXTRA WITH THINGS",
+    "description": "Start extra Fusion",
     "icon": {
       "count": 1,
-      "id": "extrathings:extra_ingot"
+      "id": "extrathings:extra_fuse_block"
     },
-    "title": "Extra start"
+    "title": "Extra Fuse"
   },
   "requirements": [
     [
-      "has_extra_ingot"
+      "has_fuse_block"
     ]
   ],
   "sends_telemetry_event": true
