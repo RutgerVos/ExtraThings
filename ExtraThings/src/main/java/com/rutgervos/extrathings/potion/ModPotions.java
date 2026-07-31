@@ -23,6 +23,8 @@ public class ModPotions {
 
              public static final RegistryObject<Potion> SLIMEY_POTION = POTIONS.register("slimey_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT.getHolder().get(), 200, 0)));
+            public static final RegistryObject<Potion> MILK_POTION = POTIONS.register("milk_potion", 
+            () -> new Potion(new MobEffectInstance(ModEffects.MILK.getHolder().get(), 1, 0)));
 
 
         public static void register(IEventBus eventBus) {

@@ -3,6 +3,7 @@ package com.rutgervos.extrathings.datagen;
 import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.item.ModItems;
+import com.rutgervos.extrathings.potion.ModPotions;
 
 import net.minecraft.advancements.*;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -61,5 +62,22 @@ public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolde
             )
             .addCriterion("has_fuse_block", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.EXTRA_FUSE_BLOCK.get()))
             .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_fuse_block"));
+        net.minecraft.world.item.ItemStack milkSplashPotionStack = net.minecraft.world.item.alchemy.PotionContents.createItemStack(
+        net.minecraft.world.item.Items.SPLASH_POTION, 
+        ModPotions.MILK_POTION.getHolder().get());
+      Advancement.Builder.advancement()
+        .parent(rootAdvancement)
+        .display(
+                milkSplashPotionStack,
+                Component.literal("Lactose Intolerant"),
+                Component.literal("Cleanse all active effects using a Potion of Milk"),
+                null,
+                AdvancementType.TASK,
+                true,
+                true,
+                false
+        )
+        .addCriterion("cleansed_with_milk", net.minecraft.advancements.CriteriaTriggers.IMPOSSIBLE.createCriterion(new net.minecraft.advancements.critereon.ImpossibleTrigger.TriggerInstance()))
+        .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_milk_potion"));
 }
 }

@@ -1,0 +1,27 @@
+{
+  "parent": "extrathings:root",
+  "criteria": {
+    "cleansed_with_milk": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": "Cleanse all active effects using a Potion of Milk",
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "extrathings:milk_potion"
+        }
+      },
+      "count": 1,
+      "id": "minecraft:splash_potion"
+    },
+    "title": "Lactose Intolerant"
+  },
+  "requirements": [
+    [
+      "cleansed_with_milk"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
