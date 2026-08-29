@@ -365,5 +365,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .requires(Blocks.STONE)
             .unlockedBy("has_stone", has(Blocks.STONE))
             .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "emerald_ore_fuse"));
+    ExtraFuseRecipeBuilder.fuseRecipe(ModItems.EXPERIENCE_GEM.get(), 1)
+            .requires(Blocks.EMERALD_BLOCK)
+            .requires(Items.GLASS_BOTTLE)
+            .requires(Blocks.EMERALD_BLOCK)
+            .unlockedBy("has_emerald_block", has(Blocks.EMERALD_BLOCK))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "experience_gem_from_fuse"));
     }
 }

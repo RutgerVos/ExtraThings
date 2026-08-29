@@ -93,6 +93,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TURTLE_LEGGINGS);
         simpleItem(ModItems.TURTLE_BOOTS);
         simpleItem(ModItems.CORROSIVE_POWDER);
+        simpleItem(ModItems.EXPERIENCE_GEM);
 
         handheldItem(ModItems.EXTRA_AXE);
         handheldItem(ModItems.EXTRA_SHOVEL);

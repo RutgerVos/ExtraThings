@@ -1,0 +1,30 @@
+{
+  "parent": "extrathings:root",
+  "criteria": {
+    "has_experience_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extrathings:experience_gem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": "Storing experience pays ....Back",
+    "icon": {
+      "count": 1,
+      "id": "extrathings:experience_gem"
+    },
+    "title": "Extra Experience Storage"
+  },
+  "requirements": [
+    [
+      "has_experience_gem"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

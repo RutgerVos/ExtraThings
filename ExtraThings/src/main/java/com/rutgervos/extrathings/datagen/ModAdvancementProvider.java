@@ -79,5 +79,19 @@ public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolde
         )
         .addCriterion("cleansed_with_milk", net.minecraft.advancements.CriteriaTriggers.IMPOSSIBLE.createCriterion(new net.minecraft.advancements.critereon.ImpossibleTrigger.TriggerInstance()))
         .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_milk_potion"));
+        Advancement.Builder.advancement()
+         .parent(rootAdvancement)
+        .display(
+                    ModItems.EXPERIENCE_GEM.get(),
+                    Component.literal("Extra Experience Storage"),
+                    Component.literal("Storing experience pays ....Back"),
+                    ResourceLocation.withDefaultNamespace("textures/gui/advancements/backgrounds/stone.png"),
+                    AdvancementType.TASK,
+                    true,
+                    true,
+                    false
+            )
+            .addCriterion("has_experience_gem", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.EXPERIENCE_GEM.get()))
+            .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_experience_gem"));
 }
 }
