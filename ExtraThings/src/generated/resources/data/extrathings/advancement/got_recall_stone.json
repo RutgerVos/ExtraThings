@@ -1,0 +1,30 @@
+{
+  "parent": "extrathings:root",
+  "criteria": {
+    "has_recall_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extrathings:recall_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": "The echo of home",
+    "icon": {
+      "count": 1,
+      "id": "extrathings:recall_stone"
+    },
+    "title": "Extra Way to get home"
+  },
+  "requirements": [
+    [
+      "has_recall_stone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

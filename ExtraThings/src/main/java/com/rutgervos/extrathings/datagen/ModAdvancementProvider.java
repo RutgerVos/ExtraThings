@@ -93,5 +93,19 @@ public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolde
             )
             .addCriterion("has_experience_gem", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.EXPERIENCE_GEM.get()))
             .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_experience_gem"));
+        Advancement.Builder.advancement()
+         .parent(rootAdvancement)
+        .display(
+                    ModItems.RECALL_STONE.get(),
+                    Component.literal("Extra Way to get home"),
+                    Component.literal("The echo of home"),
+                    ResourceLocation.withDefaultNamespace("textures/gui/advancements/backgrounds/stone.png"),
+                    AdvancementType.TASK,
+                    true,
+                    true,
+                    false
+            )
+            .addCriterion("has_recall_stone", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RECALL_STONE.get()))
+            .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_recall_stone"));
 }
 }
