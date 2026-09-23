@@ -4,6 +4,7 @@ import com.rutgervos.extrathings.ExtraThings;
 import com.rutgervos.extrathings.enchantment.custom.LavaWalkerEnchantmentEffect;
 import com.rutgervos.extrathings.enchantment.custom.LightningStrikerEnchantmentEffect;
 import com.rutgervos.extrathings.enchantment.custom.PoisonTouchEnchantmentEffect;
+import com.rutgervos.extrathings.enchantment.custom.SlowingScratchEnchantmentEffect;
 import com.rutgervos.extrathings.enchantment.custom.WitherSlashEnchantmentEffect;
 
 import net.minecraft.core.registries.Registries;
@@ -26,6 +27,8 @@ public class ModEnchantments {
             ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "wither_slash"));
             public static final ResourceKey<Enchantment> POISON_TOUCH = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "poison_touch"));
+            public static final ResourceKey<Enchantment> SLOWING_SCRATCH = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "slowing_scratch"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);
@@ -83,6 +86,18 @@ public class ModEnchantments {
                 .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
                 .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                         EnchantmentTarget.VICTIM, new PoisonTouchEnchantmentEffect()));
+        register(context, SLOWING_SCRATCH, Enchantment.enchantment(Enchantment.definition(
+                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                5,
+                2,
+                Enchantment.dynamicCost(5, 8),
+                Enchantment.dynamicCost(25, 8),
+                2,
+                EquipmentSlotGroup.MAINHAND))
+                .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
+                .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
+                        EnchantmentTarget.VICTIM, new SlowingScratchEnchantmentEffect()));
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {
