@@ -46,6 +46,10 @@ public class ModEvents {
                 new ItemCost(net.minecraft.world.item.Items.MILK_BUCKET, 1), 
                 new ItemStack(ModItems.BUTTER.get(), 12),  
                 10, 8, 0.02f));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemCost(net.minecraft.world.item.Items.WHEAT_SEEDS, 1), 
+                new ItemStack(ModItems.STRAWBERRY_SEEDS.get(), 12),  
+                10, 8, 0.02f));
         }
 
         if (event.getType() == ModVillagers.SOUND_MASTER.get()) {

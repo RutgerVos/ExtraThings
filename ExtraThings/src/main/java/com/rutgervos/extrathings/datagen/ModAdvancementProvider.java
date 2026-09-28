@@ -107,5 +107,19 @@ public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolde
             )
             .addCriterion("has_recall_stone", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RECALL_STONE.get()))
             .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_recall_stone"));
+        Advancement.Builder.advancement()
+         .parent(rootAdvancement)
+        .display(
+                    ModItems.STRAWBERRY_SEEDS.get(),
+                    Component.literal("More fruit"),
+                    Component.literal("Does it taste sweet?"),
+                    ResourceLocation.withDefaultNamespace("textures/gui/advancements/backgrounds/stone.png"),
+                    AdvancementType.TASK,
+                    true,
+                    true,
+                    false
+            )
+            .addCriterion("has_strawberry_seeds", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.STRAWBERRY_SEEDS.get()))
+            .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_strawberry_seeds"));
 }
 }
