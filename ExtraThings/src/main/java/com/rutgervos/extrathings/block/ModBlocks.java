@@ -151,7 +151,7 @@ public class ModBlocks {
             public static final RegistryObject<Block> EXTRA_CHAMBER = registerBlock("extra_chamber",
             () -> new ExtraChamberBlock(BlockBehaviour.Properties.of().noOcclusion()));
             public static final RegistryObject<Block> EXTRA_FUSE_BLOCK = registerBlock("extra_fuse_block",
-            () -> new ExtraFuseBlock(BlockBehaviour.Properties.of().noOcclusion()));
+            () -> new ExtraFuseBlock(BlockBehaviour.Properties.of().strength(2.0f).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

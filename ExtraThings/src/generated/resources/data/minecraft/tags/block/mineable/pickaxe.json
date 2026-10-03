@@ -4,6 +4,8 @@
     "extrathings:extra_block",
     "extrathings:extra_ore",
     "extrathings:sound_block",
+    "extrathings:extra_fuse_block",
+    "extrathings:extra_chamber",
     "extrathings:extra_block"
   ]
 }

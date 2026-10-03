@@ -14,7 +14,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -190,4 +192,14 @@ public class ExtraFuseBlockEntity extends BlockEntity implements MenuProvider {
         this.progress = tag.getInt("extra_fuse.progress");
         this.maxProgress = tag.getInt("extra_fuse.max_progress");
     }
+
+   public void drops() {
+    if (this.level != null && !this.level.isClientSide) {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for (int i = 0; i < this.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+        Containers.dropContents(this.level, this.worldPosition, inventory);
+    }
+}
 }

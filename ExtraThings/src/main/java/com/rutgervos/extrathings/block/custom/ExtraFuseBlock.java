@@ -65,5 +65,16 @@ public class ExtraFuseBlock extends BaseEntityBlock{
         return createTickerHelper(pBlockEntityType, ModBlockEntities.EXTRA_FUSE_BLOCK_BE.get(),
                 (level, pos, state, blockEntity) -> ExtraFuseBlockEntity.tick(level, pos, state, blockEntity));
     }
+@Override
+public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+    if (!state.is(newState.getBlock())) {
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof ExtraFuseBlockEntity fuseBE) {
+            fuseBE.drops();
+            level.updateNeighbourForOutputSignal(pos, this);
+        }
+        super.onRemove(state, level, pos, newState, isMoving);
+    }
+}
 
 }

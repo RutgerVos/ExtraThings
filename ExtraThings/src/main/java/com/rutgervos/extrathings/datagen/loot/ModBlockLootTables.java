@@ -23,35 +23,36 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
         
-        protected ModBlockLootTables(HolderLookup.Provider pRegistries) {
+        public ModBlockLootTables(HolderLookup.Provider pRegistries) {
             super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pRegistries);
         }
 
+    //NO DUPLICATES THEY CASE PROBLEMS!! ALSO ALL BLOCKS NEEDS TO HERE NO EXCEPTIONS.
     @Override
     protected void generate() {
-        this.dropSelf(ModBlocks.EXTRA_ORE.get());
-        this.dropSelf(ModBlocks.EXTRA_BLOCK.get());
-        this.dropSelf(ModBlocks.SOUND_BLOCK.get());
+    this.dropSelf(ModBlocks.EXTRA_ORE.get());
+    this.dropSelf(ModBlocks.EXTRA_BLOCK.get());
+    this.dropSelf(ModBlocks.SOUND_BLOCK.get());
 
-        this.dropSelf(ModBlocks.EXTRA_STAIRS.get());
-        this.dropSelf(ModBlocks.EXTRA_BUTTON.get());
-        this.dropSelf(ModBlocks.EXTRA_PRESSURE_PLATE.get());
-        this.dropSelf(ModBlocks.EXTRA_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.EXTRA_FENCE.get());
-        this.dropSelf(ModBlocks.EXTRA_FENCE_GATE.get());
-        this.dropSelf(ModBlocks.EXTRA_WALL.get());
-        this.dropSelf(ModBlocks.EXTRA_DOOR.get());
-        this.dropSelf(ModBlocks.EXTRA_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.EXTRA_PLANKS.get());
-        this.dropSelf(ModBlocks.EXTRA_LOG.get());
-        this.dropSelf(ModBlocks.EXTRA_WOOD.get());
-        this.dropSelf(ModBlocks.STRIPPED_EXTRA_LOG.get());
-        this.dropSelf(ModBlocks.STRIPPED_EXTRA_WOOD.get());
-        this.dropSelf(ModBlocks.EXTRA_SAPLING.get());
-        this.dropSelf(ModBlocks.PEDESTAL.get());
-        this.dropSelf(ModBlocks.EXTRA_CHAMBER.get());
-        this.dropSelf(ModBlocks.GOLD_SLAB.get());
-        this.dropSelf(ModBlocks.GOLD_STAIRS.get());
+    this.dropSelf(ModBlocks.EXTRA_STAIRS.get());
+    this.dropSelf(ModBlocks.EXTRA_BUTTON.get());
+    this.dropSelf(ModBlocks.EXTRA_PRESSURE_PLATE.get());
+    this.dropSelf(ModBlocks.EXTRA_TRAPDOOR.get());
+    this.dropSelf(ModBlocks.EXTRA_FENCE.get());
+    this.dropSelf(ModBlocks.EXTRA_FENCE_GATE.get());
+    this.dropSelf(ModBlocks.EXTRA_WALL.get());
+    this.dropSelf(ModBlocks.EXTRA_PLANKS.get());
+    this.dropSelf(ModBlocks.EXTRA_LOG.get());
+    this.dropSelf(ModBlocks.EXTRA_WOOD.get());
+    this.dropSelf(ModBlocks.STRIPPED_EXTRA_LOG.get());
+    this.dropSelf(ModBlocks.STRIPPED_EXTRA_WOOD.get());
+    this.dropSelf(ModBlocks.EXTRA_SAPLING.get());
+    this.dropSelf(ModBlocks.PEDESTAL.get());
+    this.dropSelf(ModBlocks.EXTRA_CHAMBER.get());
+    this.dropSelf(ModBlocks.GOLD_SLAB.get());
+    this.dropSelf(ModBlocks.GOLD_STAIRS.get());
+    this.dropSelf(ModBlocks.EXTRA_FUSE_BLOCK.get());
+    this.dropSelf(ModBlocks.TEMPORARY_MAGMA_BLOCK.get());
 
         this.add(ModBlocks.EXTRA_LEAVES.get(), block ->
         createLeavesDrops(block, ModBlocks.EXTRA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
