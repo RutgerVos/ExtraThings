@@ -23,6 +23,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -145,6 +146,8 @@ public class ModItems {
         () -> new CorrosivePowderItem(new Item.Properties()));
     public static final RegistryObject<Item> EXPERIENCE_GEM = ITEMS.register("experience_gem",
         () -> new ExperienceGemItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> POTION_MIXER = ITEMS.register("potion_mixer_block", 
+    () -> new BlockItem(ModBlocks.POTION_MIXER.get(), new Item.Properties()));
 
 private static ItemAttributeModifiers createHammerAttributes(Tier pTier, float pAttackDamage, float pAttackSpeed) {
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();

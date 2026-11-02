@@ -42,6 +42,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockWithItem(ModBlocks.EXTRA_BLOCK);
         BlockWithItem(ModBlocks.EXTRA_CHAMBER);
         BlockWithItem(ModBlocks.EXTRA_FUSE_BLOCK);
+        BlockWithItem(ModBlocks.POTION_MIXER);
 
         stairsBlock((StairBlock) ModBlocks.EXTRA_STAIRS.get(), blockTexture(ModBlocks.EXTRA_BLOCK.get()));
         stairsBlock((StairBlock) ModBlocks.GOLD_STAIRS.get(), blockTexture(Blocks.GOLD_BLOCK));

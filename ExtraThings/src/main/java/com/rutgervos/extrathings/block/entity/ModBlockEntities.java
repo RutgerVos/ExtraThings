@@ -5,6 +5,7 @@ import com.rutgervos.extrathings.block.ModBlocks;
 import com.rutgervos.extrathings.block.entity.custom.ExtraChamberBlockEntity;
 import com.rutgervos.extrathings.block.entity.custom.ExtraFuseBlockEntity;
 import com.rutgervos.extrathings.block.entity.custom.PedestalBlockEntity;
+import com.rutgervos.extrathings.block.entity.custom.PotionMixerBlockEntity;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,7 +37,10 @@ public class ModBlockEntities {
                 // Corrected lambda expression with explicit generic type
                 (BlockPos pos, BlockState state) -> new ExtraFuseBlockEntity(pos, state),
                 ModBlocks.EXTRA_FUSE_BLOCK.get()).build(null));
-
+   @SuppressWarnings("unchecked")
+public static final RegistryObject<BlockEntityType<PotionMixerBlockEntity>> POTION_MIXER =
+            (RegistryObject<BlockEntityType<PotionMixerBlockEntity>>) (Object) BLOCK_ENTITIES.register("potion_mixer",
+                    () -> BlockEntityType.Builder.of(PotionMixerBlockEntity::new, ModBlocks.POTION_MIXER.get()).build(null));
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

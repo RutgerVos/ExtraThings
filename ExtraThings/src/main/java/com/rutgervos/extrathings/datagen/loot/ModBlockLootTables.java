@@ -53,6 +53,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     this.dropSelf(ModBlocks.GOLD_STAIRS.get());
     this.dropSelf(ModBlocks.EXTRA_FUSE_BLOCK.get());
     this.dropSelf(ModBlocks.TEMPORARY_MAGMA_BLOCK.get());
+    this.dropSelf(ModBlocks.POTION_MIXER.get());
 
         this.add(ModBlocks.EXTRA_LEAVES.get(), block ->
         createLeavesDrops(block, ModBlocks.EXTRA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));

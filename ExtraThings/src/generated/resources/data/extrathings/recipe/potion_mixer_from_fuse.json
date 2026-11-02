@@ -1,0 +1,18 @@
+{
+  "type": "extrathings:extra_fuse",
+  "ingredients": [
+    {
+      "item": "minecraft:brewing_stand"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "extrathings:extra_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extrathings:potion_mixer_block"
+  }
+}

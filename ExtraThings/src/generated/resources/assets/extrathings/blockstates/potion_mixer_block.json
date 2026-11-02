@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "extrathings:block/potion_mixer_block"
+    }
+  }
+}

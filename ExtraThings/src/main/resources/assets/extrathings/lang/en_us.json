@@ -14,6 +14,7 @@
     "tooltip.extrathings.heart_container.desc": "Permanently increases Max Health by 1 heart.(Player can gain 10 extra hearts max.)",
     "message.extrathings.heart_used": "Your maximum health has increased!",
     "message.extrathings.heart_limit": "You have reached the maximum health limit!",
+    "tooltip.extrathings.potion_mixer.tooltip": "Mixed potions for combined Effects. if one is splash. The result can be thrown.",
 
     "item.extrathings.butter": "Butter",
 
@@ -92,6 +93,7 @@
     "block.extrathings.pedestal": "Extra pedestal",
     "block.extrathings.extra_chamber": "Extra Chamber",
     "block.extrathings.extra_fuse_block": "Extra Fuser",
+    "block.extrathings.potion_mixer_block": "Potion Mixer",
 
     "block.extrathings.blue_poppy": "Blue Poppy",
 

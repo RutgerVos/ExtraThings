@@ -1,0 +1,29 @@
+{
+  "parent": "extrathings:got_fuse_block",
+  "criteria": {
+    "has_potion_mixer_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extrathings:potion_mixer_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Science like dr.stone",
+    "icon": {
+      "count": 1,
+      "id": "extrathings:potion_mixer_block"
+    },
+    "title": "Mixing"
+  },
+  "requirements": [
+    [
+      "has_potion_mixer_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

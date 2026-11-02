@@ -10,7 +10,7 @@ import com.rutgervos.extrathings.block.custom.StrawberryCropBlock;
 import com.rutgervos.extrathings.block.custom.TemporaryMagmaBlock;
 import com.rutgervos.extrathings.item.ModItems;
 import com.rutgervos.extrathings.worldgen.tree.ModTreeGrowers;
-
+import com.rutgervos.extrathings.block.custom.PotionMixerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -152,6 +152,8 @@ public class ModBlocks {
             () -> new ExtraChamberBlock(BlockBehaviour.Properties.of().noOcclusion()));
             public static final RegistryObject<Block> EXTRA_FUSE_BLOCK = registerBlock("extra_fuse_block",
             () -> new ExtraFuseBlock(BlockBehaviour.Properties.of().strength(2.0f).noOcclusion()));
+           public static final RegistryObject<Block> POTION_MIXER = BLOCKS.register("potion_mixer_block",
+        () -> new PotionMixerBlock(BlockBehaviour.Properties.of().strength(2.0f).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

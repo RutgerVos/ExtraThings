@@ -48,7 +48,7 @@ public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolde
             )
             .addCriterion("has_corrosive_powder", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CORROSIVE_POWDER.get()))
             .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_corrosive_powder"));
-         Advancement.Builder.advancement()
+        AdvancementHolder fuseAdvancement = Advancement.Builder.advancement()
          .parent(rootAdvancement)
         .display(
                     ModBlocks.EXTRA_FUSE_BLOCK.get(),
@@ -62,6 +62,20 @@ public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolde
             )
             .addCriterion("has_fuse_block", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.EXTRA_FUSE_BLOCK.get()))
             .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_fuse_block"));
+         Advancement.Builder.advancement()
+        .parent(fuseAdvancement)
+        .display(
+                ModBlocks.POTION_MIXER.get(),
+                Component.literal("Mixing"),
+                Component.literal("Science like dr.stone"),
+                null,
+                AdvancementType.TASK,
+                true,
+                true,
+                false
+        )
+        .addCriterion("has_potion_mixer_block", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.POTION_MIXER.get()))
+        .save(saver, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "got_potion_mixer_block"));
         net.minecraft.world.item.ItemStack milkSplashPotionStack = net.minecraft.world.item.alchemy.PotionContents.createItemStack(
         net.minecraft.world.item.Items.SPLASH_POTION, 
         ModPotions.MILK_POTION.getHolder().get());
