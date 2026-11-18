@@ -17,6 +17,7 @@ import com.rutgervos.extrathings.screen.custom.ExtraChamberScreen;
 import com.rutgervos.extrathings.screen.custom.ExtraFuseBlockScreen;
 import com.rutgervos.extrathings.screen.custom.PedestalScreen;
 import com.rutgervos.extrathings.screen.custom.PotionMixerScreen;
+import com.rutgervos.extrathings.screen.custom.PotionPouchScreen;
 import com.rutgervos.extrathings.villager.ModVillagers;
 
 import net.minecraft.client.Minecraft;
@@ -170,6 +171,7 @@ public class ExtraThings
             MenuScreens.register(ModMenuTypes.EXTRA_CHAMBER_MENU.get(), ExtraChamberScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRA_FUSE_BLOCK_MENU.get(), ExtraFuseBlockScreen::new);
             MenuScreens.register(ModMenuTypes.POTION_MIXER.get(), PotionMixerScreen::new);
+            MenuScreens.register(ModMenuTypes.POTION_POUCH.get(), PotionPouchScreen::new);
             ItemProperties.register(ModItems.POCKET_FURNACE.get(), 
             ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "active"), 
             (stack, level, entity, seed) -> 

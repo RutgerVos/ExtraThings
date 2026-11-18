@@ -15,6 +15,11 @@
     "message.extrathings.heart_used": "Your maximum health has increased!",
     "message.extrathings.heart_limit": "You have reached the maximum health limit!",
     "tooltip.extrathings.potion_mixer.tooltip": "Mixed potions for combined Effects. if one is splash. The result can be thrown.",
+    "tooltip.extrathings.potion_pouch": "A specialized leather pouch for storing potions",
+    "tooltip.extrathings.potion_pouch.shift_hint": "Hold [Shift] for details...",
+    "tooltip.extrathings.potion_pouch.secret": "Psst... it fits way more than just potions.",
+    "screen.extrathings.potion_pouch": "Potion Pouch",
+    "item.extrathings.potion_pouch": "Potion Pouch",
 
     "item.extrathings.butter": "Butter",
 

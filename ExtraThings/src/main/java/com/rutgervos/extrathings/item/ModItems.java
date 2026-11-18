@@ -15,6 +15,7 @@ import com.rutgervos.extrathings.item.custom.ModArmorItem;
 import com.rutgervos.extrathings.item.custom.OreDetectorItem;
 import com.rutgervos.extrathings.item.custom.PocketFurnaceItem;
 import com.rutgervos.extrathings.item.custom.PortableEnderChestItem;
+import com.rutgervos.extrathings.item.custom.PotionPouchItem;
 import com.rutgervos.extrathings.item.custom.RecallStoneItem;
 import com.rutgervos.extrathings.item.custom.StaffOfExtra;
 
@@ -148,6 +149,8 @@ public class ModItems {
         () -> new ExperienceGemItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> POTION_MIXER = ITEMS.register("potion_mixer_block", 
     () -> new BlockItem(ModBlocks.POTION_MIXER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> POTION_POUCH = ITEMS.register("potion_pouch",
+        () -> new PotionPouchItem(new Item.Properties().stacksTo(1)));
 
 private static ItemAttributeModifiers createHammerAttributes(Tier pTier, float pAttackDamage, float pAttackSpeed) {
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();

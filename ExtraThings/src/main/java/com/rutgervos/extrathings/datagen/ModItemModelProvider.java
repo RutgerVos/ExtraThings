@@ -56,6 +56,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PORTABLE_ENDER_CHEST);
         simpleItem(ModItems.RECALL_STONE);
         simpleItem(ModItems.HEART_CONTAINER);
+        simpleItem(ModItems.POTION_POUCH);
 
         simpleBlockItem(ModBlocks.EXTRA_DOOR);
         fenceItem(ModBlocks.EXTRA_FENCE, ModBlocks.EXTRA_BLOCK);

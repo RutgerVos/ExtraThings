@@ -377,5 +377,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .requires(ModItems.EXTRA_INGOT.get())
             .unlockedBy("has_fire_charge", has(Items.FIRE_CHARGE))
             .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "potion_mixer_from_fuse"));
+    ExtraFuseRecipeBuilder.fuseRecipe(ModItems.POTION_POUCH.get(), 1)
+            .requires(Blocks.CHEST)
+            .requires(Items.LEATHER)
+            .requires(ModItems.EXTRA_INGOT.get())
+            .unlockedBy("has_leather", has(Items.LEATHER))
+            .save(pWriter, ResourceLocation.fromNamespaceAndPath(ExtraThings.MODID, "potion_pouch_from_fuse"));
     }
 }

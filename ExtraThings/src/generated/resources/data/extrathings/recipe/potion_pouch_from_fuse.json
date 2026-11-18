@@ -1,0 +1,18 @@
+{
+  "type": "extrathings:extra_fuse",
+  "ingredients": [
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "extrathings:extra_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extrathings:potion_pouch"
+  }
+}

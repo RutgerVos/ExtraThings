@@ -78,6 +78,7 @@ public class ModCreativeModTabs {
         pOutput.accept(ModItems.CORROSIVE_POWDER.get());
         pOutput.accept(ModItems.EXPERIENCE_GEM.get());
         pOutput.accept(ModItems.POTION_MIXER.get());
+        pOutput.accept(ModItems.POTION_POUCH.get());
         })
     .build());
 
